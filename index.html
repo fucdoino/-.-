@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ПЧЕЛОВОД.APP — Твоя пасека в смартфоне</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        .hero-gradient { background: linear-gradient(135deg, #fef3c7 0%, #fffbeb 100%); }
+    </style>
+</head>
+<body class="bg-white text-gray-900">
+
+    <nav class="flex items-center justify-between px-6 py-4 max-w-7xl mx-auto">
+        <div class="text-2xl font-bold text-amber-600">ПЧЕЛОВОД<span class="text-slate-800">.APP</span></div>
+        <div class="hidden md:flex space-x-8 font-medium">
+            <a href="#problems" class="hover:text-amber-600 transition">Проблемы</a>
+            <a href="#features" class="hover:text-amber-600 transition">Возможности</a>
+            <a href="#community" class="hover:text-amber-600 transition">Сообщество</a>
+        </div>
+        <a href="https://t.me/your_link" class="bg-amber-500 hover:bg-amber-600 text-white px-5 py-2 rounded-full font-semibold transition shadow-lg shadow-amber-200">
+            Вступить в группу
+        </a>
+    </nav>
+
+    <section class="hero-gradient px-6 py-16 md:py-24">
+        <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-center">
+            <div>
+                <h1 class="text-4xl md:text-6xl font-bold leading-tight text-slate-900 mb-6">
+                    Цифровая пасека <br><span class="text-amber-600">в вашем кармане</span>
+                </h1>
+                <p class="text-lg text-slate-600 mb-8">
+                    Забудьте о бумажных журналах. Управляйте ульями, записывайте осмотры голосом и следите за здоровьем пчел с помощью ИИ.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4">
+                    <button class="bg-slate-900 text-white px-8 py-4 rounded-xl font-bold hover:bg-slate-800 transition shadow-xl">
+                        Стать бета-тестером
+                    </button>
+                    <div class="flex items-center gap-3 px-4 py-2">
+                        <span class="flex -space-x-2">
+                            <div class="w-8 h-8 rounded-full bg-amber-400 border-2 border-white"></div>
+                            <div class="w-8 h-8 rounded-full bg-amber-500 border-2 border-white"></div>
+                            <div class="w-8 h-8 rounded-full bg-amber-600 border-2 border-white"></div>
+                        </span>
+                        <span class="text-sm font-medium text-slate-500">+120 пчеловодов уже с нами</span>
+                    </div>
+                </div>
+            </div>
+            <div class="relative">
+                <img src="https://via.placeholder.com/400x800?text=Скриншот+Приложения" alt="App Interface" class="mx-auto rounded-[2.5rem] border-[8px] border-slate-900 shadow-2xl shadow-amber-200 w-64 md:w-72">
+            </div>
+        </div>
+    </section>
+
+    <section id="problems" class="py-20 px-6 max-w-7xl mx-auto">
+        <h2 class="text-3xl font-bold text-center mb-12">Знакомо каждому пчеловоду</h2>
+        <div class="grid md:grid-cols-3 gap-8">
+            <div class="p-8 bg-slate-50 rounded-2xl border border-slate-100">
+                <div class="text-3xl mb-4">🧠</div>
+                <h3 class="font-bold text-xl mb-2">Всё в голове</h3>
+                <p class="text-slate-600">Сложно помнить состояние каждой семьи после осмотра 50+ ульев.</p>
+            </div>
+            <div class="p-8 bg-slate-50 rounded-2xl border border-slate-100">
+                <div class="text-3xl mb-4">📒</div>
+                <h3 class="font-bold text-xl mb-2">Записи теряются</h3>
+                <p class="text-slate-600">Бумажные журналы пачкаются прополисом, мокнут и теряются в самый нужный момент.</p>
+            </div>
+            <div class="p-8 bg-slate-50 rounded-2xl border border-slate-100">
+                <div class="text-3xl mb-4">⏳</div>
+                <h3 class="font-bold text-xl mb-2">Упущенное время</h3>
+                <p class="text-slate-600">Забыли расширить гнездо или проверить матку? Это стоит вам медосбора.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="community" class="py-20 px-6">
+        <div class="max-w-5xl mx-auto bg-slate-900 rounded-[3rem] p-12 text-center text-white relative overflow-hidden">
+            <div class="relative z-10">
+                <h2 class="text-3xl md:text-4xl font-bold mb-6">Станьте «Основателем» проекта</h2>
+                <p class="text-slate-400 mb-8 max-w-2xl mx-auto text-lg">
+                    Мы строим приложение вместе с сообществом. Вступайте в нашу группу ранних пользователей, чтобы влиять на разработку и получить пожизненный доступ.
+                </p>
+                <a href="https://t.me/your_link" class="inline-block bg-amber-500 hover:bg-amber-600 text-white px-10 py-4 rounded-full font-bold text-xl transition transform hover:scale-105 shadow-xl shadow-amber-900/20">
+                    Присоединиться в Telegram
+                </a>
+            </div>
+            <div class="absolute top-0 right-0 w-64 h-64 bg-amber-500/10 rounded-full -mr-32 -mt-32"></div>
+            <div class="absolute bottom-0 left-0 w-48 h-48 bg-amber-500/10 rounded-full -ml-24 -mb-24"></div>
+        </div>
+    </section>
+
+    <footer class="py-12 border-t border-slate-100 text-center text-slate-500">
+        <p>© 2026 ПЧЕЛОВОД.APP. Сделано для тех, кто любит пчел.</p>
+    </footer>
+
+</body>
+</html>

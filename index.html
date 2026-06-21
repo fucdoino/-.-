@@ -15,7 +15,6 @@
 </head>
 <body class="bg-slate-900 text-slate-100 antialiased">
 
-    <!-- Шапка -->
     <nav class="fixed w-full z-50 bg-slate-950/80 backdrop-blur-md border-b border-slate-800">
         <div class="max-w-5xl mx-auto px-6 h-20 flex items-center justify-between">
             <div class="text-xl font-black tracking-tighter">
@@ -26,51 +25,43 @@
                 <a href="#tariffs" class="hover:text-honey transition">Тарифы</a>
                 <a href="#future" class="hover:text-honey transition">Планы</a>
             </div>
-            <a href="https://t.me/Bee_Bishop" target="_blank" class="bg-honey text-slate-950 px-4 py-2 rounded-xl font-bold text-xs uppercase tracking-wider hover:bg-amber-500 transition">
-                Подключить
+            <a href="#tariffs" class="bg-honey text-slate-950 px-4 py-2 rounded-xl font-bold text-xs uppercase tracking-wider hover:bg-amber-500 transition">
+                Посмотреть тарифы
             </a>
         </div>
     </nav>
 
-    <!-- Главный блок -->
     <section class="pt-32 pb-16 px-6">
         <div class="max-w-4xl mx-auto text-center">
             <h1 class="text-3xl md:text-5xl font-black leading-tight mb-6 tracking-tight">
                 Веди учет на пасеке <span class="text-honey">голосом</span>, <br>не снимая рабочих перчаток
             </h1>
             <p class="text-base md:text-lg text-slate-400 mb-8 max-w-xl mx-auto">
-                Забудьте о тетрадях в прополисе и заляпанных экранах. Надиктуйте состояние улья прямо в поле — система сама запишет всё в историю семьи. Работает полностью без интернета.
+                Забудьте о тетрадях в прополисе и заляпанных экранах. Надиктуйте состояние улья прямо в поле — система сама запишет всё в история семьи. Работает полностью без интернета.
             </p>
             <div class="flex flex-col sm:flex-row justify-center gap-4">
                 <a href="#tariffs" class="bg-honey text-slate-950 px-6 py-3.5 rounded-xl font-bold hover:bg-amber-500 transition text-center">
                     Посмотреть тарифы
                 </a>
-                <a href="https://t.me/Bee_Bishop" target="_blank" class="bg-slate-800 text-white px-6 py-3.5 rounded-xl font-bold hover:bg-slate-700 transition text-center">
-                    Написать в Telegram
-                </a>
             </div>
         </div>
     </section>
 
-    <!-- Что умеет (Без заумных терминов) -->
     <section id="features" class="py-16 bg-slate-950 border-t border-slate-800">
         <div class="max-w-5xl mx-auto px-6">
             <h2 class="text-2xl md:text-3xl font-black text-center mb-12">Как это облегчает работу на пасеке</h2>
             
             <div class="grid md:grid-cols-3 gap-8">
-                <!-- Осмотр -->
                 <div class="bg-slate-900 p-6 rounded-xl border border-slate-800">
                     <div class="text-2xl mb-3">🎙️</div>
                     <h3 class="text-lg font-bold mb-2 text-white">Голосовая инспекция</h3>
                     <p class="text-slate-400 text-sm leading-relaxed">Держите стамеску и рамки, говорите как привыкли: <em>«Улей пять, матка сеет, дал вощину»</em>. Приложение само разложит данные по полочкам.</p>
                 </div>
-                <!-- Офлайн -->
                 <div class="bg-slate-900 p-6 rounded-xl border border-slate-800">
                     <div class="text-2xl mb-3">📴</div>
                     <h3 class="text-lg font-bold mb-2 text-white">Работа в глухом лесу</h3>
-                    <p class="text-slate-400 text-sm leading-relaxed">Вам не нужна связь на точке. Приложение сохраняет записи на телефоне и само отправит их на сервер, как только поймаете сеть.</p>
+                    <p class="text-slate-400 text-sm leading-relaxed">Вам не нужна связь на точке. Приложение сохраняет записи на телефоне и само отправит их на server, как только поймаете сеть.</p>
                 </div>
-                <!-- Умный поиск -->
                 <div class="bg-slate-900 p-6 rounded-xl border border-slate-800">
                     <div class="text-2xl mb-3">🧠</div>
                     <h3 class="text-lg font-bold mb-2 text-white">Задай вопрос пасеке</h3>
@@ -80,30 +71,26 @@
         </div>
     </section>
 
-    <!-- Тарифы -->
     <section id="tariffs" class="py-16 bg-slate-900">
         <div class="max-w-5xl mx-auto px-6">
             <h2 class="text-2xl md:text-3xl font-black text-center mb-12">Стоимость подписки под ваше хозяйство</h2>
 
             <div class="grid md:grid-cols-3 gap-6 items-start">
-                <!-- Любители -->
                 <div class="bg-slate-950 p-6 rounded-xl border border-slate-800 flex flex-col justify-between h-full">
                     <div>
                         <h3 class="text-lg font-bold text-white mb-1">Любители</h3>
                         <p class="text-xs text-slate-500 mb-4">До 20 ульев</p>
                         <div class="text-xl font-black text-white mb-4">3 000 ₽ <span class="text-xs font-normal text-slate-500">/ год</span></div>
                         <p class="text-xs font-bold text-honey mb-4">Выгода: Порядок без рутины</p>
-                        <ul class="text-xs text-slate-400 space-y-2 mb-6">
+                        <ul class="text-xs text-slate-400 space-y-2">
                             <li>✓ До 20 карточек ульев</li>
                             <li>✓ Голосовой ввод инспекций</li>
                             <li>✓ Умные вопросы по пасеке</li>
                             <li>✓ Работа без интернета</li>
                         </ul>
                     </div>
-                    <a href="https://t.me/Bee_Bishop?text=Привет!%20Интересует%20тариф%20Любитель" target="_blank" class="block text-center bg-slate-800 hover:bg-slate-700 text-white font-bold py-2.5 rounded-lg transition text-xs uppercase tracking-wider">Выбрать</a>
                 </div>
 
-                <!-- Профессионалы -->
                 <div class="bg-slate-950 p-6 rounded-xl border-2 border-honey shadow-lg shadow-honey/5 flex flex-col justify-between h-full relative">
                     <div class="absolute -top-3 left-1/2 transform -translate-x-1/2 bg-honey text-slate-950 text-[10px] font-bold uppercase tracking-wider px-3 py-0.5 rounded-full">Популярно</div>
                     <div>
@@ -111,37 +98,33 @@
                         <p class="text-xs text-slate-500 mb-4">Для промышленников и матководов</p>
                         <div class="text-xl font-black text-honey mb-4">5 000 ₽ <span class="text-xs font-normal text-slate-500">/ год</span></div>
                         <p class="text-xs font-bold text-honey mb-4">Выгода: Контроль матководства и экономия времени</p>
-                        <ul class="text-xs text-slate-300 space-y-2 mb-6">
+                        <ul class="text-xs text-slate-300 space-y-2">
                             <li>✓ <strong>Безлимит</strong> по количеству ульев</li>
                             <li>✓ Модуль матководства (линии, отцовские семьи)</li>
                             <li>✓ График стадий развития и тайминги</li>
                             <li>✓ Режим «Мастер» (голосовые команды)</li>
                         </ul>
                     </div>
-                    <a href="https://t.me/Bee_Bishop?text=Привет!%20Интересует%20тариф%20Профессионал" target="_blank" class="block text-center bg-honey hover:bg-amber-500 text-slate-950 font-bold py-2.5 rounded-lg transition text-xs uppercase tracking-wider">Выбрать</a>
                 </div>
 
-                <!-- Крупные хозяйства -->
                 <div class="bg-slate-950 p-6 rounded-xl border border-slate-800 flex flex-col justify-between h-full">
                     <div>
                         <h3 class="text-lg font-bold text-white mb-1">Крупные хозяйства</h3>
                         <p class="text-xs text-slate-500 mb-4">Комплексы и кооперативы</p>
                         <div class="text-xl font-black text-white mb-4">7 000 ₽ <span class="text-xs font-normal text-slate-500">/ год</span></div>
                         <p class="text-xs font-bold text-honey mb-4">Выгода: Аналитика и управление персоналом</p>
-                        <ul class="text-xs text-slate-400 space-y-2 mb-6">
+                        <ul class="text-xs text-slate-400 space-y-2">
                             <li>✓ Полный функционал без ограничений</li>
                             <li>✓ Расширенная бизнес-аналитика точков</li>
                             <li>✓ Инструменты для кооперации и сбыта</li>
                             <li>✓ Приоритетная поддержка</li>
                         </ul>
                     </div>
-                    <a href="https://t.me/Bee_Bishop?text=Привет!%20Интересует%20тариф%20Крупные%20хозяйства" target="_blank" class="block text-center bg-slate-800 hover:bg-slate-700 text-white font-bold py-2.5 rounded-lg transition text-xs uppercase tracking-wider">Выбрать</a>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Планы -->
     <section id="future" class="py-16 bg-slate-950 border-t border-slate-800">
         <div class="max-w-3xl mx-auto px-6">
             <h2 class="text-xl md:text-2xl font-black text-center mb-8 text-white">Что добавим в этом сезоне</h2>
@@ -150,27 +133,4 @@
                 <div>
                     <h3 class="text-base font-bold text-white mb-1">Интеграция с «Меркурием» и «Хорриотом» (По желанию)</h3>
                     <p class="text-slate-400 text-xs leading-relaxed">
-                        Никакой бумажной бюрократии. Надиктовали факт лечебной обработки от клеща или перевозки пчел голосом прямо в поле — приложение само сформировало и отправило структурированный отчет ветеринарам. Полная юридическая чистота вашего хозяйства в одно окно.
-                    </p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Подвал -->
-    <footer class="py-10 bg-slate-950 border-t border-slate-900 px-6 text-slate-500 text-xs">
-        <div class="max-w-5xl mx-auto flex flex-col md:flex-row justify-between items-center gap-4 text-center md:text-left">
-            <div>
-                <p class="font-bold text-slate-400">© 2026 APIARYVOICE (Голос Пасеки)</p>
-                <p class="mt-0.5">Умные технологии для эффективного пчеловодства.</p>
-            </div>
-            <div class="flex flex-col md:items-end gap-1">
-                <a href="https://t.me/Bee_Bishop" target="_blank" class="text-slate-300 font-bold hover:text-honey transition">Telegram: @Bee_Bishop</a>
-                <a href="tel:+79027929772" class="text-slate-300 hover:text-honey transition">Тел: +7 (902) 792-97-72</a>
-                <span class="text-slate-400">Почта: Stereoperm@yandex.ru | Николай</span>
-            </div>
-        </div>
-    </footer>
-
-</body>
-</html>
+                        Никакой бумажной бюрократии. Надиктовали факт лечебной обработки от клеща или перевозки пчел голосом прямо в поле — приложение само сформировало и отправило структурированный отчет ветеринарам. Полная юриди

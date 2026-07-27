@@ -15,11 +15,11 @@
 </head>
 <body class="bg-slate-950 text-slate-100 antialiased selection:bg-amber-500 selection:text-slate-950">
 
-    <!-- Уведомление о реферальном коде (показывается автоматически при переходе по QR) -->
+    <!-- Золотой реферальный баннер (автоматически появляется при сканировании QR-кода амбассадора) -->
     <div id="ref-banner" class="hidden bg-amber-500 text-slate-950 px-4 py-3 text-center font-bold text-sm shadow-lg border-b border-amber-400 flex items-center justify-center gap-2">
         <span>🐝 Вас пригласил VIP-Амбассадор Пасеки! Ваш реферальный код:</span>
-        <span id="ref-code-display" class="bg-slate-950 text-amber-400 px-3 py-0.5 rounded-lg text-xs tracking-wider uppercase"></span>
-        <span>— Регистрируйтесь и получите 15 дней бесплатного триала!</span>
+        <span id="ref-code-display" class="bg-slate-950 text-amber-400 px-3 py-0.5 rounded-lg text-xs tracking-wider uppercase font-black"></span>
+        <span>— Скачивайте приложение и получите 15 дней триала!</span>
     </div>
 
     <!-- Шапка (Navigation) -->
@@ -30,18 +30,18 @@
             </div>
             <div class="hidden md:flex gap-8 font-semibold text-sm text-slate-400">
                 <a href="#features" class="hover:text-honey transition">Что умеет</a>
+                <a href="#download" class="hover:text-honey transition">Скачать</a>
                 <a href="#trial" class="hover:text-honey transition">Бесплатный триал</a>
                 <a href="#tariffs" class="hover:text-honey transition">Тарифы</a>
-                <a href="#future" class="hover:text-honey transition">Интеграции</a>
             </div>
-            <a href="#tariffs" class="bg-honey text-slate-950 px-5 py-2.5 rounded-xl font-bold text-xs uppercase tracking-wider hover:bg-amber-500 transition shadow-lg shadow-amber-500/10">
-                Выбрать тариф
+            <a href="https://api.правильноепчеловодство.рф/downloads/apiary-voice-latest.apk" download class="bg-honey text-slate-950 px-5 py-2.5 rounded-xl font-bold text-xs uppercase tracking-wider hover:bg-amber-500 transition shadow-lg shadow-amber-500/10">
+                Скачать APK
             </a>
         </div>
     </nav>
 
     <!-- Главный баннер (Hero Section) -->
-    <section class="pt-36 pb-20 px-6 relative overflow-hidden">
+    <section class="pt-36 pb-16 px-6 relative overflow-hidden">
         <div class="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-amber-500/10 rounded-full blur-3xl pointer-events-none"></div>
         <div class="max-w-4xl mx-auto text-center relative z-10">
             <div class="inline-flex items-center gap-2 bg-slate-900 border border-amber-500/30 px-4 py-1.5 rounded-full text-xs font-bold text-amber-400 mb-6">
@@ -53,12 +53,17 @@
             <p class="text-base md:text-xl text-slate-400 mb-10 max-w-2xl mx-auto leading-relaxed">
                 Забудьте о блокнотах в прополисе и заляпанных экранах. Надиктуйте состояние улья прямо в поле — искусственный интеллект сам разложит отчет по полочкам. Работает без интернета!
             </p>
-            <div class="flex flex-col sm:flex-row justify-center gap-4">
-                <a href="#trial" class="bg-honey text-slate-950 px-8 py-4 rounded-xl font-black text-sm uppercase tracking-wider hover:bg-amber-500 transition text-center shadow-xl shadow-amber-500/20">
-                    Начать 15 дней бесплатно
+
+            <!-- БЛОК КНОПОК СКАЧИВАНИЯ -->
+            <div id="download" class="flex flex-col sm:flex-row justify-center items-center gap-4 max-w-md mx-auto">
+                <a href="https://api.правильноепчеловодство.рф/downloads/apiary-voice-latest.apk" download class="w-full sm:w-auto bg-amber-500 hover:bg-amber-400 text-slate-950 px-8 py-4 rounded-2xl font-black text-sm uppercase tracking-wider transition flex items-center justify-center gap-3 shadow-xl shadow-amber-500/20">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path></svg>
+                    <span>Скачать APK на Android</span>
                 </a>
-                <a href="#tariffs" class="bg-slate-900 border border-slate-800 text-slate-200 px-8 py-4 rounded-xl font-bold text-sm hover:border-amber-500/50 transition text-center">
-                    Тарифы подписки
+
+                <a href="https://apps.rustore.ru/app/com.apiaryvoice" target="_blank" class="w-full sm:w-auto bg-slate-900 border border-slate-700 hover:border-amber-500/50 text-white px-8 py-4 rounded-2xl font-bold text-sm transition flex items-center justify-center gap-3">
+                    <span class="text-xl">🛍️</span>
+                    <span>RuStore</span>
                 </a>
             </div>
         </div>
@@ -72,17 +77,17 @@
                     <span class="bg-amber-500/20 text-amber-400 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider">15 Дней Бесплатно + Бонусы</span>
                     <h2 class="text-2xl md:text-3xl font-black text-white mt-4 mb-4">Попробуйте без риска и обязательств</h2>
                     <p class="text-slate-300 text-sm leading-relaxed mb-6">
-                        Каждый новый пчеловод автоматически получает **15 дней бесплатного триала**.  
-                        А если заполните **Паспорт Пасеки** в приложении — получите **еще +16 дней** в подарок! (Итого **31 день полного бесплатного доступа**).
+                        Каждый новый пчеловод бесплатно получает **15 дней триала** при регистрации.  
+                        Заполните **Паспорт Пасеки** в приложении — и получите **еще +16 дней** в подарок! (Итого **31 день бесплатного применения**).
                     </p>
                     <div class="flex flex-wrap gap-4 text-xs font-semibold text-amber-300">
                         <span class="flex items-center gap-1.5">✓ Без ввода банковской карты</span>
-                        <span class="flex items-center gap-1.5">✓ До 10 ульев и ИИ-аналитика</span>
+                        <span class="flex items-center gap-1.5">✓ Учет до 10 ульев и ИИ-анализ</span>
                     </div>
                 </div>
                 <div class="w-full md:w-auto flex-shrink-0 text-center">
-                    <a href="#tariffs" class="inline-block bg-honey text-slate-950 px-8 py-4 rounded-2xl font-black text-sm uppercase tracking-wider hover:bg-amber-500 transition shadow-lg shadow-amber-500/20">
-                        Скачать и Начать
+                    <a href="https://api.правильноепчеловодство.рф/downloads/apiary-voice-latest.apk" download class="inline-block bg-honey text-slate-950 px-8 py-4 rounded-2xl font-black text-sm uppercase tracking-wider hover:bg-amber-500 transition shadow-lg shadow-amber-500/20">
+                        Скачать Приложение
                     </a>
                 </div>
             </div>
@@ -135,8 +140,8 @@
                             <li class="flex items-center gap-2">✓ Полная работа без интернета</li>
                         </ul>
                     </div>
-                    <a href="#trial" class="block w-full text-center bg-slate-900 border border-slate-700 hover:border-amber-500 text-white font-bold py-3.5 rounded-xl text-xs uppercase tracking-wider transition">
-                        Выбрать Базовый
+                    <a href="https://api.правильноепчеловодство.рф/downloads/apiary-voice-latest.apk" download class="block w-full text-center bg-slate-900 border border-slate-700 hover:border-amber-500 text-white font-bold py-3.5 rounded-xl text-xs uppercase tracking-wider transition">
+                        Скачать и Начать
                     </a>
                 </div>
 
@@ -154,8 +159,8 @@
                             <li class="flex items-center gap-2">✓ Экспорт отчетов в Excel и PDF</li>
                         </ul>
                     </div>
-                    <a href="#trial" class="block w-full text-center bg-slate-900 border border-slate-700 hover:border-amber-500 text-white font-bold py-3.5 rounded-xl text-xs uppercase tracking-wider transition">
-                        Выбрать Коммерческий
+                    <a href="https://api.правильноепчеловодство.рф/downloads/apiary-voice-latest.apk" download class="block w-full text-center bg-slate-900 border border-slate-700 hover:border-amber-500 text-white font-bold py-3.5 rounded-xl text-xs uppercase tracking-wider transition">
+                        Скачать и Начать
                     </a>
                 </div>
 
@@ -176,26 +181,9 @@
                             <li class="flex items-center gap-2">✓ Приоритетный ИИ-анализ и VIP-поддержка</li>
                         </ul>
                     </div>
-                    <a href="#trial" class="block w-full text-center bg-amber-500 hover:bg-amber-400 text-slate-950 font-black py-4 rounded-xl text-xs uppercase tracking-wider transition shadow-lg shadow-amber-500/20">
-                        Оплатить Матководство
+                    <a href="https://api.правильноепчеловодство.рф/downloads/apiary-voice-latest.apk" download class="block w-full text-center bg-amber-500 hover:bg-amber-400 text-slate-950 font-black py-4 rounded-xl text-xs uppercase tracking-wider transition shadow-lg shadow-amber-500/20">
+                        Скачать Приложение
                     </a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Будущие Интеграции -->
-    <section id="future" class="py-20 bg-slate-950 border-t border-slate-800">
-        <div class="max-w-4xl mx-auto px-6">
-            <h2 class="text-2xl md:text-3xl font-black text-center mb-10 text-white">Планы развития на сезон</h2>
-            <div class="bg-slate-900 border border-slate-800 rounded-3xl p-8 flex flex-col md:flex-row gap-6 items-start">
-                <div class="text-4xl p-4 bg-amber-500/10 rounded-2xl text-honey flex-shrink-0">🏛️</div>
-                <div>
-                    <h3 class="text-xl font-bold text-white mb-2">Интеграция с «Меркурием» и «Хорриотом»</h3>
-                    <p class="text-slate-400 text-sm leading-relaxed mb-4">
-                        Никакой бумажной бюрократии. Надиктовали факт лечебной обработки от клеща Варроа или перевозки пчел голосом прямо в поле — приложение само сформирует структурированный отчет для ветслужбы.
-                    </p>
-                    <span class="inline-block bg-slate-800 text-amber-400 text-xs font-semibold px-3 py-1 rounded-lg">В разработке (Сезон 2026)</span>
                 </div>
             </div>
         </div>

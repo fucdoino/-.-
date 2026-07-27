@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ApiaryVoice — Голосовой блокнот пчеловода</title>
+    <title>ApiaryVoice — Голосовой помощник и ИИ для пчеловода</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet">
     <style>
@@ -13,124 +13,228 @@
         .border-honey { border-color: #F59E0B; }
     </style>
 </head>
-<body class="bg-slate-900 text-slate-100 antialiased">
+<body class="bg-slate-950 text-slate-100 antialiased selection:bg-amber-500 selection:text-slate-950">
 
-    <nav class="fixed w-full z-50 bg-slate-950/80 backdrop-blur-md border-b border-slate-800">
-        <div class="max-w-5xl mx-auto px-6 h-20 flex items-center justify-between">
-            <div class="text-xl font-black tracking-tighter">
-                <span class="text-honey">🐝</span> APIARY<span class="text-honey">VOICE</span>
+    <!-- Уведомление о реферальном коде (показывается автоматически при переходе по QR) -->
+    <div id="ref-banner" class="hidden bg-amber-500 text-slate-950 px-4 py-3 text-center font-bold text-sm shadow-lg border-b border-amber-400 flex items-center justify-center gap-2">
+        <span>🐝 Вас пригласил VIP-Амбассадор Пасеки! Ваш реферальный код:</span>
+        <span id="ref-code-display" class="bg-slate-950 text-amber-400 px-3 py-0.5 rounded-lg text-xs tracking-wider uppercase"></span>
+        <span>— Регистрируйтесь и получите 15 дней бесплатного триала!</span>
+    </div>
+
+    <!-- Шапка (Navigation) -->
+    <nav class="fixed w-full z-50 bg-slate-950/90 backdrop-blur-md border-b border-slate-800/80">
+        <div class="max-w-6xl mx-auto px-6 h-20 flex items-center justify-between">
+            <div class="text-2xl font-black tracking-tighter flex items-center gap-2">
+                <span class="text-honey text-3xl">🐝</span> APIARY<span class="text-honey">VOICE</span>
             </div>
-            <div class="hidden sm:flex gap-6 font-semibold text-sm text-slate-400">
+            <div class="hidden md:flex gap-8 font-semibold text-sm text-slate-400">
                 <a href="#features" class="hover:text-honey transition">Что умеет</a>
+                <a href="#trial" class="hover:text-honey transition">Бесплатный триал</a>
                 <a href="#tariffs" class="hover:text-honey transition">Тарифы</a>
-                <a href="#future" class="hover:text-honey transition">Планы</a>
+                <a href="#future" class="hover:text-honey transition">Интеграции</a>
             </div>
-            <a href="#tariffs" class="bg-honey text-slate-950 px-4 py-2 rounded-xl font-bold text-xs uppercase tracking-wider hover:bg-amber-500 transition">
-                Посмотреть тарифы
+            <a href="#tariffs" class="bg-honey text-slate-950 px-5 py-2.5 rounded-xl font-bold text-xs uppercase tracking-wider hover:bg-amber-500 transition shadow-lg shadow-amber-500/10">
+                Выбрать тариф
             </a>
         </div>
     </nav>
 
-    <section class="pt-32 pb-16 px-6">
-        <div class="max-w-4xl mx-auto text-center">
-            <h1 class="text-3xl md:text-5xl font-black leading-tight mb-6 tracking-tight">
-                Веди учет на пасеке <span class="text-honey">голосом</span>, <br>не снимая рабочих перчаток
+    <!-- Главный баннер (Hero Section) -->
+    <section class="pt-36 pb-20 px-6 relative overflow-hidden">
+        <div class="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-amber-500/10 rounded-full blur-3xl pointer-events-none"></div>
+        <div class="max-w-4xl mx-auto text-center relative z-10">
+            <div class="inline-flex items-center gap-2 bg-slate-900 border border-amber-500/30 px-4 py-1.5 rounded-full text-xs font-bold text-amber-400 mb-6">
+                <span>✨ ИИ-Помощник на базе Sber GigaChat</span>
+            </div>
+            <h1 class="text-4xl md:text-6xl font-black leading-tight mb-6 tracking-tight">
+                Ведите учет на пасеке <span class="text-honey">голосом</span>, <br class="hidden sm:inline">не снимая рабочих перчаток
             </h1>
-            <p class="text-base md:text-lg text-slate-400 mb-8 max-w-xl mx-auto">
-                Забудьте о тетрадях в прополисе и заляпанных экранах. Надиктуйте состояние улья прямо в поле — система сама запишет всё в история семьи. Работает полностью без интернета.
+            <p class="text-base md:text-xl text-slate-400 mb-10 max-w-2xl mx-auto leading-relaxed">
+                Забудьте о блокнотах в прополисе и заляпанных экранах. Надиктуйте состояние улья прямо в поле — искусственный интеллект сам разложит отчет по полочкам. Работает без интернета!
             </p>
             <div class="flex flex-col sm:flex-row justify-center gap-4">
-                <a href="#tariffs" class="bg-honey text-slate-950 px-6 py-3.5 rounded-xl font-bold hover:bg-amber-500 transition text-center">
-                    Посмотреть тарифы
+                <a href="#trial" class="bg-honey text-slate-950 px-8 py-4 rounded-xl font-black text-sm uppercase tracking-wider hover:bg-amber-500 transition text-center shadow-xl shadow-amber-500/20">
+                    Начать 15 дней бесплатно
+                </a>
+                <a href="#tariffs" class="bg-slate-900 border border-slate-800 text-slate-200 px-8 py-4 rounded-xl font-bold text-sm hover:border-amber-500/50 transition text-center">
+                    Тарифы подписки
                 </a>
             </div>
         </div>
     </section>
 
-    <section id="features" class="py-16 bg-slate-950 border-t border-slate-800">
+    <!-- Раздел о Бесплатном Триале и Геймификации -->
+    <section id="trial" class="py-16 bg-slate-900/60 border-y border-slate-800/80">
         <div class="max-w-5xl mx-auto px-6">
-            <h2 class="text-2xl md:text-3xl font-black text-center mb-12">Как это облегчает работу на пасеке</h2>
+            <div class="bg-gradient-to-r from-amber-950/40 via-slate-900 to-slate-900 border border-amber-500/30 rounded-3xl p-8 md:p-12 flex flex-col md:flex-row items-center justify-between gap-8 shadow-2xl">
+                <div class="max-w-xl">
+                    <span class="bg-amber-500/20 text-amber-400 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider">15 Дней Бесплатно + Бонусы</span>
+                    <h2 class="text-2xl md:text-3xl font-black text-white mt-4 mb-4">Попробуйте без риска и обязательств</h2>
+                    <p class="text-slate-300 text-sm leading-relaxed mb-6">
+                        Каждый новый пчеловод автоматически получает **15 дней бесплатного триала**.  
+                        А если заполните **Паспорт Пасеки** в приложении — получите **еще +16 дней** в подарок! (Итого **31 день полного бесплатного доступа**).
+                    </p>
+                    <div class="flex flex-wrap gap-4 text-xs font-semibold text-amber-300">
+                        <span class="flex items-center gap-1.5">✓ Без ввода банковской карты</span>
+                        <span class="flex items-center gap-1.5">✓ До 10 ульев и ИИ-аналитика</span>
+                    </div>
+                </div>
+                <div class="w-full md:w-auto flex-shrink-0 text-center">
+                    <a href="#tariffs" class="inline-block bg-honey text-slate-950 px-8 py-4 rounded-2xl font-black text-sm uppercase tracking-wider hover:bg-amber-500 transition shadow-lg shadow-amber-500/20">
+                        Скачать и Начать
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Преимущества (Features) -->
+    <section id="features" class="py-20 bg-slate-950">
+        <div class="max-w-5xl mx-auto px-6">
+            <h2 class="text-3xl md:text-4xl font-black text-center mb-16">Как это работает на вашей пасеке</h2>
             
             <div class="grid md:grid-cols-3 gap-8">
-                <div class="bg-slate-900 p-6 rounded-xl border border-slate-800">
-                    <div class="text-2xl mb-3">🎙️</div>
-                    <h3 class="text-lg font-bold mb-2 text-white">Голосовая инспекция</h3>
-                    <p class="text-slate-400 text-sm leading-relaxed">Держите стамеску и рамки, говорите как привыкли: <em>«Улей пять, матка сеет, дал вощину»</em>. Приложение само разложит данные по полочкам.</p>
+                <div class="bg-slate-900/80 p-8 rounded-2xl border border-slate-800/80 hover:border-amber-500/40 transition group">
+                    <div class="text-3xl mb-4 p-3 bg-amber-500/10 rounded-xl inline-block text-honey">🎙️</div>
+                    <h3 class="text-xl font-bold mb-3 text-white">Голосовая инспекция</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed">Держите стамеску и рамки, говорите как привыкли: <em>«Улей пять, матка сеет, дал вощину»</em>. Приложение само структурирует данные.</p>
                 </div>
-                <div class="bg-slate-900 p-6 rounded-xl border border-slate-800">
-                    <div class="text-2xl mb-3">📴</div>
-                    <h3 class="text-lg font-bold mb-2 text-white">Работа в глухом лесу</h3>
-                    <p class="text-slate-400 text-sm leading-relaxed">Вам не нужна связь на точке. Приложение сохраняет записи на телефоне и само отправит их на server, как только поймаете сеть.</p>
+                <div class="bg-slate-900/80 p-8 rounded-2xl border border-slate-800/80 hover:border-amber-500/40 transition group">
+                    <div class="text-3xl mb-4 p-3 bg-amber-500/10 rounded-xl inline-block text-honey">📴</div>
+                    <h3 class="text-xl font-bold mb-3 text-white">Работа в глухом лесу</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed">Связь на точке не нужна. Приложение сохраняет записи в памяти и распознает их локально на вашем устройстве.</p>
                 </div>
-                <div class="bg-slate-900 p-6 rounded-xl border border-slate-800">
-                    <div class="text-2xl mb-3">🧠</div>
-                    <h3 class="text-lg font-bold mb-2 text-white">Задай вопрос пасеке</h3>
-                    <p class="text-slate-400 text-sm leading-relaxed">Вместо листания блокнота спросите голосом: <em>«Где у меня 4 рамки расплода?»</em> или <em>«Что с чем объединить?»</em> — и получите точный ответ.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="tariffs" class="py-16 bg-slate-900">
-        <div class="max-w-5xl mx-auto px-6">
-            <h2 class="text-2xl md:text-3xl font-black text-center mb-12">Стоимость подписки под ваше хозяйство</h2>
-
-            <div class="grid md:grid-cols-3 gap-6 items-start">
-                <div class="bg-slate-950 p-6 rounded-xl border border-slate-800 flex flex-col justify-between h-full">
-                    <div>
-                        <h3 class="text-lg font-bold text-white mb-1">Любители</h3>
-                        <p class="text-xs text-slate-500 mb-4">До 20 ульев</p>
-                        <div class="text-xl font-black text-white mb-4">3 000 ₽ <span class="text-xs font-normal text-slate-500">/ год</span></div>
-                        <p class="text-xs font-bold text-honey mb-4">Выгода: Порядок без рутины</p>
-                        <ul class="text-xs text-slate-400 space-y-2">
-                            <li>✓ До 20 карточек ульев</li>
-                            <li>✓ Голосовой ввод инспекций</li>
-                            <li>✓ Умные вопросы по пасеке</li>
-                            <li>✓ Работа без интернета</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="bg-slate-950 p-6 rounded-xl border-2 border-honey shadow-lg shadow-honey/5 flex flex-col justify-between h-full relative">
-                    <div class="absolute -top-3 left-1/2 transform -translate-x-1/2 bg-honey text-slate-950 text-[10px] font-bold uppercase tracking-wider px-3 py-0.5 rounded-full">Популярно</div>
-                    <div>
-                        <h3 class="text-lg font-bold text-white mb-1">Профессионалы</h3>
-                        <p class="text-xs text-slate-500 mb-4">Для промышленников и матководов</p>
-                        <div class="text-xl font-black text-honey mb-4">5 000 ₽ <span class="text-xs font-normal text-slate-500">/ год</span></div>
-                        <p class="text-xs font-bold text-honey mb-4">Выгода: Контроль матководства и экономия времени</p>
-                        <ul class="text-xs text-slate-300 space-y-2">
-                            <li>✓ <strong>Безлимит</strong> по количеству ульев</li>
-                            <li>✓ Модуль матководства (линии, отцовские семьи)</li>
-                            <li>✓ График стадий развития и тайминги</li>
-                            <li>✓ Режим «Мастер» (голосовые команды)</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="bg-slate-950 p-6 rounded-xl border border-slate-800 flex flex-col justify-between h-full">
-                    <div>
-                        <h3 class="text-lg font-bold text-white mb-1">Крупные хозяйства</h3>
-                        <p class="text-xs text-slate-500 mb-4">Комплексы и кооперативы</p>
-                        <div class="text-xl font-black text-white mb-4">7 000 ₽ <span class="text-xs font-normal text-slate-500">/ год</span></div>
-                        <p class="text-xs font-bold text-honey mb-4">Выгода: Аналитика и управление персоналом</p>
-                        <ul class="text-xs text-slate-400 space-y-2">
-                            <li>✓ Полный функционал без ограничений</li>
-                            <li>✓ Расширенная бизнес-аналитика точков</li>
-                            <li>✓ Инструменты для кооперации и сбыта</li>
-                            <li>✓ Приоритетная поддержка</li>
-                        </ul>
-                    </div>
+                <div class="bg-slate-900/80 p-8 rounded-2xl border border-slate-800/80 hover:border-amber-500/40 transition group">
+                    <div class="text-3xl mb-4 p-3 bg-amber-500/10 rounded-xl inline-block text-honey">🧠</div>
+                    <h3 class="text-xl font-bold mb-3 text-white">Задай вопрос пасеке</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed">Спросите голосом: <em>«Где у меня 4 рамки расплода?»</em> или <em>«Что с чем объединить?»</em> — и искусственный интеллект даст точный ответ.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="future" class="py-16 bg-slate-950 border-t border-slate-800">
-        <div class="max-w-3xl mx-auto px-6">
-            <h2 class="text-xl md:text-2xl font-black text-center mb-8 text-white">Что добавим в этом сезоне</h2>
-            <div class="bg-slate-900 border border-slate-800 rounded-xl p-6 flex gap-4 items-start">
-                <div class="text-3xl">🏛️</div>
+    <!-- Тарифы подписки (Tariffs Section) -->
+    <section id="tariffs" class="py-20 bg-slate-900/50 border-t border-slate-800/80">
+        <div class="max-w-6xl mx-auto px-6">
+            <h2 class="text-3xl md:text-4xl font-black text-center mb-4">Стоимость подписки под ваше хозяйство</h2>
+            <p class="text-slate-400 text-center max-w-xl mx-auto mb-16 text-sm">Подписка оформляется на 1 год (365 дней). Безопасная оплата через ЮKassa (СБП, СберPay, карты).</p>
+
+            <div class="grid md:grid-cols-3 gap-8 items-stretch">
+                <!-- Тариф 1: Базовый -->
+                <div class="bg-slate-950 p-8 rounded-3xl border border-slate-800 flex flex-col justify-between h-full">
+                    <div>
+                        <h3 class="text-xl font-bold text-white mb-1">Базовый Пасечник</h3>
+                        <p class="text-xs text-slate-400 mb-6">До 30 ульев включительно</p>
+                        <div class="text-3xl font-black text-white mb-4">3 000 ₽ <span class="text-xs font-normal text-slate-500">/ год</span></div>
+                        <p class="text-xs font-bold text-amber-400 mb-6">Выгода: Порядок без рутины</p>
+                        <ul class="text-xs text-slate-300 space-y-3 mb-8">
+                            <li class="flex items-center gap-2">✓ Учет до 30 ульев включительно</li>
+                            <li class="flex items-center gap-2">✓ Голосовой ввод отчетов в поле</li>
+                            <li class="flex items-center gap-2">✓ ИИ-анализатор отчетов (GigaChat)</li>
+                            <li class="flex items-center gap-2">✓ Полная работа без интернета</li>
+                        </ul>
+                    </div>
+                    <a href="#trial" class="block w-full text-center bg-slate-900 border border-slate-700 hover:border-amber-500 text-white font-bold py-3.5 rounded-xl text-xs uppercase tracking-wider transition">
+                        Выбрать Базовый
+                    </a>
+                </div>
+
+                <!-- Тариф 2: Коммерческая пасека -->
+                <div class="bg-slate-950 p-8 rounded-3xl border border-slate-800 flex flex-col justify-between h-full">
+                    <div>
+                        <h3 class="text-xl font-bold text-white mb-1">Коммерческая Пасека</h3>
+                        <p class="text-xs text-slate-400 mb-6">До 100 ульев включительно</p>
+                        <div class="text-3xl font-black text-white mb-4">6 000 ₽ <span class="text-xs font-normal text-slate-500">/ год</span></div>
+                        <p class="text-xs font-bold text-amber-400 mb-6">Выгода: Контроль и напарники</p>
+                        <ul class="text-xs text-slate-300 space-y-3 mb-8">
+                            <li class="flex items-center gap-2">✓ Учет до 100 ульев включительно</li>
+                            <li class="flex items-center gap-2">✓ Все функции Базового тарифа</li>
+                            <li class="flex items-center gap-2">✓ Подключение до 3 напарников (ACL)</li>
+                            <li class="flex items-center gap-2">✓ Экспорт отчетов в Excel и PDF</li>
+                        </ul>
+                    </div>
+                    <a href="#trial" class="block w-full text-center bg-slate-900 border border-slate-700 hover:border-amber-500 text-white font-bold py-3.5 rounded-xl text-xs uppercase tracking-wider transition">
+                        Выбрать Коммерческий
+                    </a>
+                </div>
+
+                <!-- Тариф 3: Матководство + Безлимит (ХИТ ПРОДАЖ) -->
+                <div class="bg-slate-950 p-8 rounded-3xl border-2 border-amber-500 shadow-2xl shadow-amber-500/10 flex flex-col justify-between h-full relative">
+                    <div class="absolute -top-3.5 left-1/2 -translate-x-1/2 bg-amber-500 text-slate-950 text-[11px] font-black uppercase tracking-wider px-4 py-1 rounded-full shadow-lg">
+                        👑 ХИТ ПРОДАЖ
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-bold text-white mb-1">Матководство + Безлимит</h3>
+                        <p class="text-xs text-amber-400 font-semibold mb-6">Без ограничений по ульям</p>
+                        <div class="text-3xl font-black text-amber-400 mb-4">9 000 ₽ <span class="text-xs font-normal text-slate-500">/ год</span></div>
+                        <p class="text-xs font-bold text-amber-400 mb-6">Выгода: Полный учет племенной работы</p>
+                        <ul class="text-xs text-slate-200 space-y-3 mb-8">
+                            <li class="flex items-center gap-2 font-bold text-amber-300">✓ <strong>Безлимитное</strong> количество ульев</li>
+                            <li class="flex items-center gap-2 font-bold text-amber-300">✓ Модуль «Матководство» (партии, нуклеусы)</li>
+                            <li class="flex items-center gap-2">✓ График развития маток и прививок</li>
+                            <li class="flex items-center gap-2">✓ Приоритетный ИИ-анализ и VIP-поддержка</li>
+                        </ul>
+                    </div>
+                    <a href="#trial" class="block w-full text-center bg-amber-500 hover:bg-amber-400 text-slate-950 font-black py-4 rounded-xl text-xs uppercase tracking-wider transition shadow-lg shadow-amber-500/20">
+                        Оплатить Матководство
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Будущие Интеграции -->
+    <section id="future" class="py-20 bg-slate-950 border-t border-slate-800">
+        <div class="max-w-4xl mx-auto px-6">
+            <h2 class="text-2xl md:text-3xl font-black text-center mb-10 text-white">Планы развития на сезон</h2>
+            <div class="bg-slate-900 border border-slate-800 rounded-3xl p-8 flex flex-col md:flex-row gap-6 items-start">
+                <div class="text-4xl p-4 bg-amber-500/10 rounded-2xl text-honey flex-shrink-0">🏛️</div>
                 <div>
-                    <h3 class="text-base font-bold text-white mb-1">Интеграция с «Меркурием» и «Хорриотом» (По желанию)</h3>
-                    <p class="text-slate-400 text-xs leading-relaxed">
-                        Никакой бумажной бюрократии. Надиктовали факт лечебной обработки от клеща или перевозки пчел голосом прямо в поле — приложение само сформировало и отправило структурированный отчет ветеринарам. Полная юриди
+                    <h3 class="text-xl font-bold text-white mb-2">Интеграция с «Меркурием» и «Хорриотом»</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed mb-4">
+                        Никакой бумажной бюрократии. Надиктовали факт лечебной обработки от клеща Варроа или перевозки пчел голосом прямо в поле — приложение само сформирует структурированный отчет для ветслужбы.
+                    </p>
+                    <span class="inline-block bg-slate-800 text-amber-400 text-xs font-semibold px-3 py-1 rounded-lg">В разработке (Сезон 2026)</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Подвал (Footer) -->
+    <footer class="py-12 bg-slate-950 border-t border-slate-900 text-center text-slate-500 text-xs">
+        <div class="max-w-5xl mx-auto px-6">
+            <div class="text-lg font-black tracking-tighter mb-4 text-slate-300">
+                <span class="text-honey">🐝</span> APIARY<span class="text-honey">VOICE</span>
+            </div>
+            <p class="mb-4">Официальный сайт приложения. ИП / ООО Торшин • правильноепчеловодство.рф</p>
+            <div class="flex justify-center gap-6 text-slate-400 mb-6">
+                <a href="#" class="hover:text-honey transition">Политика конфиденциальности</a>
+                <a href="#" class="hover:text-honey transition">Пользовательское соглашение (ФЗ-152)</a>
+            </div>
+            <p>© 2026 ApiaryVoice. Все права защищены.</p>
+        </div>
+    </footer>
+
+    <!-- Скрипт подхвата реферального QR-кода -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const urlParams = new URLSearchParams(window.location.search);
+            const refParam = urlParams.get('ref');
+            
+            if (refParam) {
+                // Сохраняем реферальный код амбассадора в памяти браузера
+                localStorage.setItem('apiary_referral_code', refParam);
+                
+                // Показываем золотой реферальный баннер
+                const banner = document.getElementById('ref-banner');
+                const codeDisplay = document.getElementById('ref-code-display');
+                if (banner && codeDisplay) {
+                    codeDisplay.textContent = refParam;
+                    banner.classList.remove('hidden');
+                }
+            }
+        });
+    </script>
+</body>
+</html>

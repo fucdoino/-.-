@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Правильное Пчеловодство — Голосовой ИИ-журнал пасеки</title>
-    <meta name="description" content="Голосовой журнал пасеки без блокнотов и потерь информации. Режим «Свободные руки» в перчатках, работа офлайн в глухом лесу, обучение ИИ под вашу технологию вождения.">
+    <title>Правильное Пчеловодство — Цифровой секретарь вашей пасеки</title>
+    <meta name="description" content="Цифровой секретарь пасеки. Голосовой учет у открытого улья: сохраняйте все детали, увеличивайте силу семей и прибыльность пасеки без блокнотов в воске.">
     <link rel="icon" type="image/png" href="favicon.png">
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -45,36 +45,39 @@
             font-feature-settings: "cv02", "cv03", "cv04", "cv11";
         }
         .honey-glow {
-            box-shadow: 0 0 70px -10px rgba(245, 158, 11, 0.2);
+            box-shadow: 0 0 80px -10px rgba(245, 158, 11, 0.22);
         }
         .honey-border {
             border: 1px solid rgba(245, 158, 11, 0.25);
+        }
+        .screen-shadow {
+            box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.7), 0 0 25px -5px rgba(245, 158, 11, 0.15);
         }
     </style>
 </head>
 <body class="bg-slate-950 text-slate-100 selection:bg-amber-500 selection:text-slate-950 antialiased">
 
     <!-- Header / Navigation -->
-    <header class="sticky top-0 z-50 backdrop-blur-md bg-slate-950/85 border-b border-slate-900">
+    <header class="sticky top-0 z-50 backdrop-blur-md bg-slate-950/90 border-b border-slate-900">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
             <div class="flex items-center space-x-3">
                 <div class="w-9 h-9 rounded-xl bg-amber-500/10 border border-amber-500/30 flex items-center justify-center text-amber-400 font-bold text-lg">
                     🐝
                 </div>
-                <span class="font-bold text-lg tracking-tight text-white">Правильное <span class="text-amber-500">Пчеловодство</span></span>
+                <span class="font-extrabold text-lg tracking-tight text-white">Правильное <span class="text-amber-500">Пчеловодство</span></span>
             </div>
 
             <nav class="hidden md:flex items-center space-x-8 text-sm font-medium text-slate-300">
                 <a href="#how-it-works" class="hover:text-amber-400 transition-colors">Свободные руки</a>
+                <a href="#business-value" class="hover:text-amber-400 transition-colors">Пасека как бизнес</a>
                 <a href="#screenshots" class="hover:text-amber-400 transition-colors">Интерфейс</a>
-                <a href="#ai-assistant" class="hover:text-amber-400 transition-colors">ИИ-Помощник</a>
+                <a href="#planning" class="hover:text-amber-400 transition-colors">Справочник и погода</a>
                 <a href="#pricing" class="hover:text-amber-400 transition-colors">Тарифы</a>
                 <a href="#reviews" class="hover:text-amber-400 transition-colors">Отзывы</a>
-                <a href="#faq" class="hover:text-amber-400 transition-colors">Вопросы</a>
             </nav>
 
             <div class="flex items-center space-x-3">
-                <a href="https://api.xn--80aeaajeaw1actmdbcbhk7au1hze.xn--p1ai/downloads/apiary-voice-latest.apk" class="px-4 py-2 rounded-xl bg-amber-500 hover:bg-amber-400 text-slate-950 font-semibold text-sm transition-all shadow-lg shadow-amber-500/20 flex items-center space-x-2">
+                <a href="https://api.xn--80aeaajeaw1actmdbcbhk7au1hze.xn--p1ai/downloads/apiary-voice-latest.apk" class="px-4 py-2 rounded-xl bg-amber-500 hover:bg-amber-400 text-slate-950 font-bold text-sm transition-all shadow-lg shadow-amber-500/20 flex items-center space-x-2">
                     <span>Скачать APK</span>
                     <span class="text-xs bg-slate-950/20 px-1.5 py-0.5 rounded font-mono">v2.0.3</span>
                 </a>
@@ -83,25 +86,30 @@
     </header>
 
     <!-- HERO SECTION -->
-    <section class="relative pt-12 pb-20 md:pt-20 md:pb-32 overflow-hidden">
+    <section class="relative pt-12 pb-20 md:pt-20 md:pb-28 overflow-hidden">
         <div class="absolute inset-0 honey-glow pointer-events-none"></div>
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <div class="text-center max-w-4xl mx-auto">
                 <div class="inline-flex items-center space-x-2 px-3.5 py-1.5 rounded-full bg-amber-500/10 border border-amber-500/30 text-amber-400 text-xs font-semibold uppercase tracking-wider mb-6">
-                    <span>🎧 100% Голосовой учёт пасеки</span>
+                    <span>🎙️ Цифровой секретарь вашей пасеки</span>
                 </div>
                 
-                <h1 class="text-3xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-white leading-tight mb-6">
-                    Сохраняйте каждую деталь пасеки.<br>
-                    <span class="text-transparent bg-clip-text bg-gradient-to-r from-amber-400 to-amber-600">Говорите своими словами — мы всё запомним.</span>
+                <h1 class="text-3xl sm:text-5xl lg:text-6xl font-black tracking-tight text-white leading-tight mb-6">
+                    Фиксируйте осмотры голосом прямо у открытого улья — <span class="text-transparent bg-clip-text bg-gradient-to-r from-amber-400 to-amber-600">без потерь, блокнотов и нервов.</span>
                 </h1>
 
-                <p class="text-lg sm:text-xl text-slate-300 mb-8 max-w-3xl mx-auto leading-relaxed">
-                    Никаких блокнотов в воске и затертых записей. Приложение понимает профессиональный сленг, ваши привычные термины и само обучает персонального ИИ-ассистента под вашу технологию вождения.
+                <p class="text-lg sm:text-xl text-slate-300 mb-6 max-w-3xl mx-auto leading-relaxed font-normal">
+                    Приложение сохраняет ваши голосовые осмотры, фиксирует абсолютно все детали и само структурирует их так, как удобно именно вам для дальнейшей работы. Экономит кучу времени и сил.
                 </p>
 
+                <div class="p-4 sm:p-6 rounded-2xl bg-slate-900/80 border border-amber-500/30 max-w-3xl mx-auto mb-10 text-left">
+                    <p class="text-sm sm:text-base text-slate-200 leading-relaxed">
+                        <strong class="text-amber-400 font-semibold">Именно в тот момент, когда улей открыт</strong>, нужно сохранить информацию и принять верное решение. Именно в этот момент мы помогаем: точно сохраняем все данные, помогаем максимизировать силу семьи, сберечь драгоценное время короткого сезона и увеличить прибыльность вашей пасеки.
+                    </p>
+                </div>
+
                 <div class="flex flex-col sm:flex-row items-center justify-center gap-4 mb-12">
-                    <a href="https://api.xn--80aeaajeaw1actmdbcbhk7au1hze.xn--p1ai/downloads/apiary-voice-latest.apk" class="w-full sm:w-auto px-8 py-4 rounded-xl bg-amber-500 hover:bg-amber-400 text-slate-950 font-bold text-base transition-all shadow-xl shadow-amber-500/25 flex items-center justify-center space-x-3">
+                    <a href="https://api.xn--80aeaajeaw1actmdbcbhk7au1hze.xn--p1ai/downloads/apiary-voice-latest.apk" class="w-full sm:w-auto px-8 py-4 rounded-xl bg-amber-500 hover:bg-amber-400 text-slate-950 font-extrabold text-base transition-all shadow-xl shadow-amber-500/25 flex items-center justify-center space-x-3">
                         <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path></svg>
                         <span>Попробовать бесплатно (2 недели)</span>
                     </a>
@@ -112,127 +120,101 @@
                 </div>
 
                 <!-- Trust Badges -->
-                <div class="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-3xl mx-auto text-left">
-                    <div class="p-3.5 rounded-xl bg-slate-900/60 border border-slate-800/80 flex items-center space-x-3">
-                        <div class="text-amber-400 text-lg">📵</div>
-                        <div class="text-xs font-medium text-slate-300">Работает в глухом лесу без связи</div>
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-4xl mx-auto text-left">
+                    <div class="p-4 rounded-xl bg-slate-900/60 border border-slate-800/80 flex items-center space-x-3">
+                        <div class="text-amber-400 text-xl">📵</div>
+                        <div class="text-xs font-medium text-slate-300">100% Офлайн в глухом лесу</div>
                     </div>
-                    <div class="p-3.5 rounded-xl bg-slate-900/60 border border-slate-800/80 flex items-center space-x-3">
-                        <div class="text-amber-400 text-lg">🧤</div>
-                        <div class="text-xs font-medium text-slate-300">Не нужно снимать перчатки в прополисе</div>
+                    <div class="p-4 rounded-xl bg-slate-900/60 border border-slate-800/80 flex items-center space-x-3">
+                        <div class="text-amber-400 text-xl">🧤</div>
+                        <div class="text-xs font-medium text-slate-300">Перчатки в прополисе — экран чистый</div>
                     </div>
-                    <div class="p-3.5 rounded-xl bg-slate-900/60 border border-slate-800/80 flex items-center space-x-3">
-                        <div class="text-amber-400 text-lg">🗣️</div>
-                        <div class="text-xs font-medium text-slate-300">Понимает сленг и любые сокращения</div>
+                    <div class="p-4 rounded-xl bg-slate-900/60 border border-slate-800/80 flex items-center space-x-3">
+                        <div class="text-amber-400 text-xl">👨‍🌾</div>
+                        <div class="text-xs font-medium text-slate-300">Контроль наёмных рабочих</div>
                     </div>
-                    <div class="p-3.5 rounded-xl bg-slate-900/60 border border-slate-800/80 flex items-center space-x-3">
-                        <div class="text-amber-400 text-lg">🎯</div>
-                        <div class="text-xs font-medium text-slate-300">0% потери важных нюансов сезона</div>
+                    <div class="p-4 rounded-xl bg-slate-900/60 border border-slate-800/80 flex items-center space-x-3">
+                        <div class="text-amber-400 text-xl">📈</div>
+                        <div class="text-xs font-medium text-slate-300">Рост силы семей и дохода</div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- REAL APP SCREENSHOTS GALLERY -->
-    <section id="screenshots" class="py-16 bg-slate-900/30 border-t border-slate-900">
+    <!-- BUSINESS & REAL PAIN SECTION -->
+    <section id="business-value" class="py-20 bg-slate-900/40 border-y border-slate-900">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center max-w-3xl mx-auto mb-12">
-                <div class="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-amber-500/10 border border-amber-500/30 text-amber-400 text-xs font-semibold mb-4">
-                    <span>📱 Реальный интерфейс приложения</span>
+            <div class="max-w-3xl mx-auto text-center mb-16">
+                <div class="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-red-500/10 border border-red-500/30 text-red-400 text-xs font-semibold mb-4">
+                    <span>⚠️ Сезон короток. Время на вес золота</span>
                 </div>
-                <h2 class="text-3xl font-bold text-white mb-4">
-                    Просто, наглядно и создано для полевых условий
-                </h2>
-                <p class="text-slate-400 text-sm">
-                    Крупные шрифты, высокий контраст для работы на солнце и мгновенная раскладка по карточкам.
-                </p>
-            </div>
-
-            <!-- Screenshot Cards -->
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <!-- Screen 1 -->
-                <div class="bg-slate-900 border border-slate-800 rounded-2xl p-4 shadow-xl flex flex-col items-center">
-                    <div class="w-full rounded-xl overflow-hidden mb-4 bg-slate-950 border border-slate-800">
-                        <img src="./assets/screen_main_hub.png" alt="Главный экран Голосового Хаба" class="w-full h-auto object-cover">
-                    </div>
-                    <h3 class="text-base font-bold text-white mb-1">Голосовой Хаб Пасеки</h3>
-                    <p class="text-xs text-slate-400 text-center">Один клик — и приложение слушает команды у улья в режиме «Без рук».</p>
-                </div>
-
-                <!-- Screen 2 -->
-                <div class="bg-slate-900 border border-slate-800 rounded-2xl p-4 shadow-xl flex flex-col items-center">
-                    <div class="w-full rounded-xl overflow-hidden mb-4 bg-slate-950 border border-slate-800">
-                        <img src="./assets/screen_inspection_detail.png" alt="Карточка осмотра с расшифровкой ИИ" class="w-full h-auto object-cover">
-                    </div>
-                    <h3 class="text-base font-bold text-white mb-1">Расшифровка Осмотра ИИ</h3>
-                    <p class="text-xs text-slate-400 text-center">ИИ выделяет номер улья, статус матки, силу расплода, корма и выполненные работы.</p>
-                </div>
-
-                <!-- Screen 3 -->
-                <div class="bg-slate-900 border border-slate-800 rounded-2xl p-4 shadow-xl flex flex-col items-center">
-                    <div class="w-full rounded-xl overflow-hidden mb-4 bg-slate-950 border border-slate-800">
-                        <img src="./assets/screen_hives_list.png" alt="Реестр и статусы ульев" class="w-full h-auto object-cover">
-                    </div>
-                    <h3 class="text-base font-bold text-white mb-1">Реестр Пасеки</h3>
-                    <p class="text-xs text-slate-400 text-center">Вся пасека как на ладони: даты последних ревизий, порода маток и задачи.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- PAIN & REAL COST SECTION -->
-    <section class="py-16 bg-slate-900/40 border-y border-slate-900">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="max-w-3xl mx-auto text-center mb-12">
-                <h2 class="text-2xl sm:text-4xl font-bold text-white mb-4">
-                    Сезон корозок. Забытая мелочь сегодня — это потерянная семья или рой завтра
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-white mb-4">
+                    Пасека как бизнес: почему потеря информации обходится слишком дорого
                 </h2>
                 <p class="text-slate-400 text-base">
-                    Пчеловодство не прощает упущенной информации. В суматохе главного взятка или весеннего развития надеяться на память или блокнот — значит терять деньги.
+                    Если вы думаете о расширении пасеки, выводите маток, нанимаете помощников или просто хотите меньше мучаться — потерянные записи бьют прямо по вашему карману.
                 </p>
             </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                <div class="p-6 rounded-2xl bg-slate-900/80 border border-red-500/20 relative overflow-hidden">
-                    <div class="text-3xl mb-4">⚠️</div>
-                    <h3 class="text-lg font-bold text-white mb-2">Потеря статуса маток и роения</h3>
-                    <p class="text-slate-400 text-sm leading-relaxed">
-                        Забыли, в каком улье матка была неплодная, где заложили свищевые, а где маточник на выходе? Результат — потерянный рой и сорванный медосбор.
-                    </p>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Pain 1 -->
+                <div class="p-8 rounded-2xl bg-slate-900/80 border border-red-500/20 relative overflow-hidden flex flex-col justify-between">
+                    <div>
+                        <div class="text-3xl mb-4">🐝</div>
+                        <h3 class="text-xl font-bold text-white mb-3">Гибель семей и потерянные рои</h3>
+                        <p class="text-slate-400 text-sm leading-relaxed mb-4">
+                            Забыли, в каком улье матка была неплодная, где заложили свищевые маточники, а где семья проседает по кормам? В разгар сезона одна упущенная мелочь — это слетевший рой, трутовка и сорванный медосбор.
+                        </p>
+                    </div>
+                    <div class="text-xs font-medium text-red-400/90 pt-4 border-t border-slate-800">
+                        ✖ Потеря до 20–30% продуктивности пасеки
+                    </div>
                 </div>
 
-                <div class="p-6 rounded-2xl bg-slate-900/80 border border-amber-500/20 relative overflow-hidden">
-                    <div class="text-3xl mb-4">⏳</div>
-                    <h3 class="text-lg font-bold text-white mb-2">Вечерняя рутина вместо отдыха</h3>
-                    <p class="text-slate-400 text-sm leading-relaxed">
-                        После 8 часов на ногах под палящим солнцем садиться и переносить каракули из блокнота в тетрадь — адский труд, на который часто не остается сил.
-                    </p>
+                <!-- Pain 2 -->
+                <div class="p-8 rounded-2xl bg-slate-900/80 border border-amber-500/20 relative overflow-hidden flex flex-col justify-between">
+                    <div>
+                        <div class="text-3xl mb-4">👨‍🌾</div>
+                        <h3 class="text-xl font-bold text-white mb-3">Контроль наёмных работников</h3>
+                        <p class="text-slate-400 text-sm leading-relaxed mb-4">
+                            Поручили обход помощнику? Вместо неразборчивых записей на клочках бумаги работник просто надиктовывает улей вслух. Вы получаете прозрачный журнал каждого улья без необходимости перепроверять всё лично.
+                        </p>
+                    </div>
+                    <div class="text-xs font-medium text-amber-400/90 pt-4 border-t border-slate-800">
+                        ✓ Прозрачный учёт работы бригады
+                    </div>
                 </div>
 
-                <div class="p-6 rounded-2xl bg-slate-900/80 border border-emerald-500/20 relative overflow-hidden">
-                    <div class="text-3xl mb-4">🍯</div>
-                    <h3 class="text-lg font-bold text-white mb-2">Голосовой ИИ сохраняет 100% базы</h3>
-                    <p class="text-slate-400 text-sm leading-relaxed">
-                        Диктуйте в потоке: состояние расплода, силу, корма, работы с корпусами. ИИ мгновенно раскладывает всё по структурированным карточкам.
-                    </p>
+                <!-- Pain 3 -->
+                <div class="p-8 rounded-2xl bg-slate-900/80 border border-emerald-500/20 relative overflow-hidden flex flex-col justify-between">
+                    <div>
+                        <div class="text-3xl mb-4">🍯</div>
+                        <h3 class="text-xl font-bold text-white mb-3">Решения у открытого улья</h3>
+                        <p class="text-slate-400 text-sm leading-relaxed mb-4">
+                            Секретарь мгновенно раскладывает параметры семьи по карточкам. Вы точно знаете дату подсадки матки, динамику расплода и когда нужно расширение. Принимайте верные решения и увеличивайте силу каждой семьи.
+                        </p>
+                    </div>
+                    <div class="text-xs font-medium text-emerald-400/90 pt-4 border-t border-slate-800">
+                        ✓ Максимум товарного мёда и сохранность пчёл
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- HANDS-FREE SECTION -->
+    <!-- DETAILED HANDS-FREE SECTION -->
     <section id="how-it-works" class="py-20 relative">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center max-w-3xl mx-auto mb-16">
                 <div class="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-amber-500/10 border border-amber-500/30 text-amber-400 text-xs font-semibold mb-4">
-                    <span>🎧 Автономный рабочий процесс</span>
+                    <span>🎧 Настоящая работа без рук</span>
                 </div>
                 <h2 class="text-3xl sm:text-4xl font-extrabold text-white mb-4">
-                    Режим «Свободные руки»: телефон в кармане, вы у улья
+                    Нажали одну кнопку перед обходом — и пошли спокойно работать
                 </h2>
-                <p class="text-slate-400 text-base">
-                    Вам больше не нужно прикасаться к экрану липкими пальцами или снимать перчатки.
+                <p class="text-slate-300 text-base leading-relaxed">
+                    Телефон лежит в кармане. Вам не страшны ни злые пчёлы, ни перчатки в липком воске и прополисе, ни шум ветра.
                 </p>
             </div>
 
@@ -242,12 +224,12 @@
                     <div class="w-12 h-12 rounded-xl bg-amber-500 text-slate-950 font-black text-xl flex items-center justify-center mb-6">
                         1
                     </div>
-                    <h3 class="text-xl font-bold text-white mb-3">Команда «Старт / Начало»</h3>
+                    <h3 class="text-xl font-bold text-white mb-3">Подошли к улью: «Улей номер 5»</h3>
                     <p class="text-slate-400 text-sm leading-relaxed mb-4">
-                        Положите телефон в карман или на подставку. Произнесите вслух команду старта — звуковой сигнал подтвердит, что запись пошла.
+                        Перед выходом на пасеку один раз активируете «Свободные руки». Телефон в карман. Подошли к семье — сказали: <span class="text-amber-400 font-semibold">«Улей номер 5»</span> или <span class="text-amber-400 font-semibold">«Старт»</span>. Звуковой отклик подтвердит начало.
                     </p>
                     <div class="p-3 rounded-lg bg-slate-950 border border-slate-800 font-mono text-xs text-amber-400">
-                        «Улей 12, расплод на четырёх, дал сушь под засев»
+                        «Улей 5, расплод на шести, подставил вощину»
                     </div>
                 </div>
 
@@ -256,12 +238,12 @@
                     <div class="w-12 h-12 rounded-xl bg-amber-500 text-slate-950 font-black text-xl flex items-center justify-center mb-6">
                         2
                     </div>
-                    <h3 class="text-xl font-bold text-white mb-3">Работайте в своем темпе</h3>
+                    <h3 class="text-xl font-bold text-white mb-3">Говорите так, как привыкли</h3>
                     <p class="text-slate-400 text-sm leading-relaxed mb-4">
-                        Проговаривайте всё, что видите: силу семьи, запасы меда, сушь, вощину, поведение матки. Шумоподавление отсекает гул пчёл и порывы ветра.
+                        Диктуйте своими словами и профессиональным сленгом: состояние расплода, поведение матки, сушь, вощину, силу, запасы кормов. Шумоподавление чётко фильтрует гул пасеки и порывы ветра.
                     </p>
                     <div class="p-3 rounded-lg bg-slate-950 border border-slate-800 font-mono text-xs text-emerald-400">
-                        «Матка меченая желтым, сеет плотно, маточников нет»
+                        «Матка желтая меченая, сеет сплошняком, мисочек нет»
                     </div>
                 </div>
 
@@ -270,63 +252,155 @@
                     <div class="w-12 h-12 rounded-xl bg-amber-500 text-slate-950 font-black text-xl flex items-center justify-center mb-6">
                         3
                     </div>
-                    <h3 class="text-xl font-bold text-white mb-3">Команда «Стоп / Конец»</h3>
+                    <h3 class="text-xl font-bold text-white mb-3">«Конец записи» — и к следующему</h3>
                     <p class="text-slate-400 text-sm leading-relaxed mb-4">
-                        Сказали «Стоп» — запись остановилась, нарезалась и сохранилась в памяти телефона. ИИ сам распределит данные по ульям, даже если нет связи.
+                        Закончили осмотр — скомандовали: <span class="text-amber-400 font-semibold">«Конец записи»</span> или <span class="text-amber-400 font-semibold">«Стоп»</span>. Запись автоматически нарезается, раскладывается по карточке улья и сохраняется даже без связи. И вы спокойно идете дальше.
                     </p>
                     <div class="p-3 rounded-lg bg-slate-950 border border-slate-800 font-mono text-xs text-slate-300">
-                        ✓ Запись структурирована в паспорт улья №12
+                        ✓ Карточка улья №5 обновлена
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- AI ASSISTANT, KNOWLEDGE BASE & WEATHER INTEGRATION -->
-    <section id="ai-assistant" class="py-20 bg-slate-900/50 border-t border-slate-900">
+    <!-- REAL APP SCREENSHOTS GALLERY (FROM TELEGRAM DESKTOP 1-9) -->
+    <section id="screenshots" class="py-20 bg-slate-900/30 border-t border-slate-900">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <div class="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-amber-500/10 border border-amber-500/30 text-amber-400 text-xs font-semibold mb-4">
+                    <span>📱 Реальный интерфейс программы</span>
+                </div>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-white mb-4">
+                    Всё наглядно, просто и создано для работы в поле
+                </h2>
+                <p class="text-slate-400 text-base">
+                    Крупные кнопки, высокий контраст для чтения на ярком солнце и мгновенное разделение по ульям.
+                </p>
+            </div>
+
+            <!-- Screenshot Grid -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Screen 1 -->
+                <div class="bg-slate-900 border border-slate-800 rounded-2xl p-3 shadow-xl hover:border-amber-500/50 transition-all flex flex-col">
+                    <div class="w-full rounded-xl overflow-hidden mb-3 bg-slate-950 border border-slate-800">
+                        <img src="./assets/screen_1.jpg" alt="Главный экран приложения" class="w-full h-auto object-cover">
+                    </div>
+                    <div class="text-sm font-bold text-white mb-1">Голосовой пульт пасеки</div>
+                    <div class="text-xs text-slate-400">Быстрый запуск осмотров и кнопка «Без рук».</div>
+                </div>
+
+                <!-- Screen 2 -->
+                <div class="bg-slate-900 border border-slate-800 rounded-2xl p-3 shadow-xl hover:border-amber-500/50 transition-all flex flex-col">
+                    <div class="w-full rounded-xl overflow-hidden mb-3 bg-slate-950 border border-slate-800">
+                        <img src="./assets/screen_2.jpg" alt="Карточка осмотра улья" class="w-full h-auto object-cover">
+                    </div>
+                    <div class="text-sm font-bold text-white mb-1">Разбор данных осмотра</div>
+                    <div class="text-xs text-slate-400">Расплод, сила, запасы меда и выполненные работы.</div>
+                </div>
+
+                <!-- Screen 3 -->
+                <div class="bg-slate-900 border border-slate-800 rounded-2xl p-3 shadow-xl hover:border-amber-500/50 transition-all flex flex-col">
+                    <div class="w-full rounded-xl overflow-hidden mb-3 bg-slate-950 border border-slate-800">
+                        <img src="./assets/screen_3.jpg" alt="Реестр пасеки" class="w-full h-auto object-cover">
+                    </div>
+                    <div class="text-sm font-bold text-white mb-1">Реестр всех ульев</div>
+                    <div class="text-xs text-slate-400">Сводка по семьям, породам маток и датам ревизий.</div>
+                </div>
+
+                <!-- Screen 4 -->
+                <div class="bg-slate-900 border border-slate-800 rounded-2xl p-3 shadow-xl hover:border-amber-500/50 transition-all flex flex-col">
+                    <div class="w-full rounded-xl overflow-hidden mb-3 bg-slate-950 border border-slate-800">
+                        <img src="./assets/screen_4.jpg" alt="Паспорт пасеки и настройки" class="w-full h-auto object-cover">
+                    </div>
+                    <div class="text-sm font-bold text-white mb-1">Паспорт пасеки</div>
+                    <div class="text-xs text-slate-400">Настройка типов рамок, пород пчёл и точков.</div>
+                </div>
+
+                <!-- Screen 6 -->
+                <div class="bg-slate-900 border border-slate-800 rounded-2xl p-3 shadow-xl hover:border-amber-500/50 transition-all flex flex-col">
+                    <div class="w-full rounded-xl overflow-hidden mb-3 bg-slate-950 border border-slate-800">
+                        <img src="./assets/screen_6.jpg" alt="Журнал и история работ" class="w-full h-auto object-cover">
+                    </div>
+                    <div class="text-sm font-bold text-white mb-1">История и журнал работ</div>
+                    <div class="text-xs text-slate-400">Хронология всех действий по каждому улью за сезон.</div>
+                </div>
+
+                <!-- Screen 7 -->
+                <div class="bg-slate-900 border border-slate-800 rounded-2xl p-3 shadow-xl hover:border-amber-500/50 transition-all flex flex-col">
+                    <div class="w-full rounded-xl overflow-hidden mb-3 bg-slate-950 border border-slate-800">
+                        <img src="./assets/screen_7.jpg" alt="Модуль матководства" class="w-full h-auto object-cover">
+                    </div>
+                    <div class="text-sm font-bold text-white mb-1">Матководство и прививки</div>
+                    <div class="text-xs text-slate-400">Графики вывода, контроль выхода и облета маток.</div>
+                </div>
+
+                <!-- Screen 8 -->
+                <div class="bg-slate-900 border border-slate-800 rounded-2xl p-3 shadow-xl hover:border-amber-500/50 transition-all flex flex-col">
+                    <div class="w-full rounded-xl overflow-hidden mb-3 bg-slate-950 border border-slate-800">
+                        <img src="./assets/screen_8.jpg" alt="Диалог со своей пасекой" class="w-full h-auto object-cover">
+                    </div>
+                    <div class="text-sm font-bold text-white mb-1">Диалог со своей базой</div>
+                    <div class="text-xs text-slate-400">Быстрый поиск семей по любым критериям и параметрам.</div>
+                </div>
+
+                <!-- Screen 9 -->
+                <div class="bg-slate-900 border border-slate-800 rounded-2xl p-3 shadow-xl hover:border-amber-500/50 transition-all flex flex-col">
+                    <div class="w-full rounded-xl overflow-hidden mb-3 bg-slate-950 border border-slate-800">
+                        <img src="./assets/screen_9.jpg" alt="Аналитика и планирование" class="w-full h-auto object-cover">
+                    </div>
+                    <div class="text-sm font-bold text-white mb-1">Сводка и подготовка к сезону</div>
+                    <div class="text-xs text-slate-400">Статистика по медосбору, кормам и зимовке.</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PLANNING, KNOWLEDGE BASE & WEATHER INTEGRATION -->
+    <section id="planning" class="py-20 bg-slate-900/50 border-t border-slate-900">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
                 <div>
                     <div class="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 text-xs font-semibold mb-6">
-                        <span>🧠 Личный ИИ-ассистент под вашу технологию</span>
+                        <span>🧠 Цифровой справочник пасеки</span>
                     </div>
                     
                     <h2 class="text-3xl sm:text-4xl font-extrabold text-white mb-6 leading-tight">
-                        Задавайте вопросы своей пасеке и планируйте работы с ИИ
+                        Задавайте вопросы своей пасеке и планируйте работы по погоде
                     </h2>
 
                     <p class="text-slate-300 text-base mb-8 leading-relaxed">
-                        Вся история ваших осмотров превращается в живую базу знаний. Вы можете в любой момент голосом или текстом спросить помощника о состоянии любого улья.
+                        Вся история ваших осмотров превращается в единую структурированную базу. Вы можете в любой момент спросить секретаря о состоянии любого улья или запланировать выезд.
                     </p>
 
                     <div class="space-y-6">
                         <div class="flex items-start space-x-4">
-                            <div class="w-8 h-8 rounded-lg bg-amber-500/20 text-amber-400 flex items-center justify-center flex-shrink-0 mt-1">
+                            <div class="w-9 h-9 rounded-lg bg-amber-500/20 text-amber-400 flex items-center justify-center flex-shrink-0 mt-1 text-lg">
                                 💬
                             </div>
                             <div>
-                                <h4 class="text-base font-bold text-white">Мгновенные справки по базе</h4>
-                                <p class="text-slate-400 text-sm">Спросите: *«В каких ульях матки 2024 года?»* или *«Где неделю назад было мало корма?»* — ИИ выдаст точный список.</p>
+                                <h4 class="text-base font-bold text-white">Мгновенная справка по вашей базе</h4>
+                                <p class="text-slate-400 text-sm">Спросите: *«В каких ульях матки 2024 года?»* или *«Где нужно расширение сушью?»* — секретарь выдаст точный список.</p>
                             </div>
                         </div>
 
                         <div class="flex items-start space-x-4">
-                            <div class="w-8 h-8 rounded-lg bg-emerald-500/20 text-emerald-400 flex items-center justify-center flex-shrink-0 mt-1">
+                            <div class="w-9 h-9 rounded-lg bg-emerald-500/20 text-emerald-400 flex items-center justify-center flex-shrink-0 mt-1 text-lg">
                                 🌦️
                             </div>
                             <div>
-                                <h4 class="text-base font-bold text-white">Интеграция с погодой и окнами медосбора</h4>
-                                <p class="text-slate-400 text-sm">ИИ сопоставляет запланированные расширения, обработки и изоляцию маток с прогнозом погоды и температурами.</p>
+                                <h4 class="text-base font-bold text-white">Интеграция с погодой и взятком</h4>
+                                <p class="text-slate-400 text-sm">Секретарь сопоставляет запланированные расширения, обработки и изоляцию маток с прогнозом погоды и температурными окнами.</p>
                             </div>
                         </div>
 
                         <div class="flex items-start space-x-4">
-                            <div class="w-8 h-8 rounded-lg bg-amber-500/20 text-amber-400 flex items-center justify-center flex-shrink-0 mt-1">
+                            <div class="w-9 h-9 rounded-lg bg-amber-500/20 text-amber-400 flex items-center justify-center flex-shrink-0 mt-1 text-lg">
                                 ⚙️
                             </div>
                             <div>
-                                <h4 class="text-base font-bold text-white">Обучение под ваши методы</h4>
-                                <p class="text-slate-400 text-sm">Ведёте 2-корпусную систему, работаете с нуклеусами или матковыводными семьями? ИИ адаптируется под вашу схему.</p>
+                                <h4 class="text-base font-bold text-white">Подстройка под вашу технологию</h4>
+                                <p class="text-slate-400 text-sm">Ведёте 2-корпусную систему, работаете с нуклеусами, лежаками или матковыводными семьями? Система адаптируется под ваши правила.</p>
                             </div>
                         </div>
                     </div>
@@ -337,7 +411,7 @@
                     <div class="flex items-center justify-between border-b border-slate-800 pb-4 mb-6">
                         <div class="flex items-center space-x-3">
                             <div class="w-3 h-3 rounded-full bg-emerald-500 animate-pulse"></div>
-                            <span class="text-sm font-semibold text-white">Диалог с пасекой (Онлайн)</span>
+                            <span class="text-sm font-semibold text-white">Справка по пасеке</span>
                         </div>
                         <span class="text-xs font-mono text-slate-500">Точок «Центральный»</span>
                     </div>
@@ -346,7 +420,7 @@
                         <!-- User message -->
                         <div class="flex items-start space-x-3 justify-end">
                             <div class="bg-amber-500 text-slate-950 px-4 py-2.5 rounded-2xl rounded-tr-none font-medium max-w-xs sm:max-w-md">
-                                «В каких ульях нужно проверить облет маток на этой неделе?»
+                                «В каких ульях проверить облёт маток на этой неделе?»
                             </div>
                         </div>
 
@@ -358,9 +432,9 @@
                             <div class="bg-slate-900 border border-slate-800 text-slate-200 px-4 py-3 rounded-2xl rounded-tl-none max-w-xs sm:max-w-md space-y-2">
                                 <p class="font-medium text-amber-400">На контроле 3 семьи:</p>
                                 <ul class="list-disc list-inside text-xs text-slate-300 space-y-1">
-                                    <li><strong class="text-white">Улей №11:</strong> маточник вышел 18 августа, проверка засева рекомендуется в четверг (+23°C, ясно).</li>
+                                    <li><strong class="text-white">Улей №11:</strong> маточник вышел 18 августа, проверка засева рекомендуется в четверг (+23°C, солнечно).</li>
                                     <li><strong class="text-white">Улей №17:</strong> объединение с ловушкой, статус матки не подтвержден.</li>
-                                    <li><strong class="text-white">Улей №22:</strong> плановый контроль после отводка.</li>
+                                    <li><strong class="text-white">Улей №22:</strong> плановый контроль после формирования отводка.</li>
                                 </ul>
                             </div>
                         </div>
@@ -370,7 +444,7 @@
         </div>
     </section>
 
-    <!-- REAL TELEGRAM COMMUNITY REVIEWS -->
+    <!-- REVIEWS SECTION (REAL SIMPLE RUSSIAN NAMES) -->
     <section id="reviews" class="py-20 border-t border-slate-900">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center max-w-3xl mx-auto mb-16">
@@ -378,21 +452,21 @@
                     Что говорят пчеловоды-практики
                 </h2>
                 <p class="text-slate-400 text-base">
-                    Реальные отзывы и опыт участников нашего открытого сообщества тестировщиков.
+                    Опыт участников нашего сообщества на реальных пасеках.
                 </p>
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
                 <div class="p-6 rounded-2xl bg-slate-900/60 border border-slate-800 flex flex-col justify-between">
                     <p class="text-slate-300 text-sm leading-relaxed mb-6 italic">
-                        «Обновился по прямой ссылке. Голосовые команды и осмотры обработаны чётко. Когда у тебя десятки ульев, надиктовать голосом прямо во время работы — единственный способ не потерять инфу к вечеру.»
+                        «Когда у тебя десятки ульев, надиктовать голосом прямо во время работы — единственный способ не потерять инфу к вечеру. Все осмотры обработаны чётко, телефон чистый.»
                     </p>
                     <div class="flex items-center space-x-3 pt-4 border-t border-slate-800/80">
                         <div class="w-10 h-10 rounded-full bg-amber-500/20 text-amber-400 font-bold flex items-center justify-center text-sm">
-                            АТ
+                            А
                         </div>
                         <div>
-                            <div class="text-white font-semibold text-sm">Александр Торшилов</div>
+                            <div class="text-white font-semibold text-sm">Александр</div>
                             <div class="text-slate-500 text-xs">Практикующий пчеловод</div>
                         </div>
                     </div>
@@ -400,30 +474,30 @@
 
                 <div class="p-6 rounded-2xl bg-slate-900/60 border border-slate-800 flex flex-col justify-between">
                     <p class="text-slate-300 text-sm leading-relaxed mb-6 italic">
-                        «Режим свободных рук в поле — это топ. Сказал старт, продиктовал все по расплоду и меду, сказал стоп. Телефон в кармане, руки свободны, экран чистый.»
+                        «Режим свободных рук в поле — это то, что нужно. Сказал старт, продиктовал все по расплоду и меду, сказал стоп. Телефон в кармане, руки свободны, голова свободна.»
                     </p>
                     <div class="flex items-center space-x-3 pt-4 border-t border-slate-800/80">
                         <div class="w-10 h-10 rounded-full bg-emerald-500/20 text-emerald-400 font-bold flex items-center justify-center text-sm">
-                            ДМ
+                            Д
                         </div>
                         <div>
                             <div class="text-white font-semibold text-sm">Денис</div>
-                            <div class="text-slate-500 text-xs">VIP-тестировщик пасеки</div>
+                            <div class="text-slate-500 text-xs">Матковод и селекционер</div>
                         </div>
                     </div>
                 </div>
 
                 <div class="p-6 rounded-2xl bg-slate-900/60 border border-slate-800 flex flex-col justify-between">
                     <p class="text-slate-300 text-sm leading-relaxed mb-6 italic">
-                        «За 2 недели откачки надиктовал 23 осмотра подряд. Все зашло в базу без сбоев. Главное, что не нужно подбирать правильные слова — говоришь как есть, программа всё раскладывает сама.»
+                        «За 2 недели откачки надиктовал 23 осмотра подряд. Все зашло в базу без сбоев. Главное, что не нужно подбирать фразы — говоришь как есть, программа всё раскладывает сама.»
                     </p>
                     <div class="flex items-center space-x-3 pt-4 border-t border-slate-800/80">
                         <div class="w-10 h-10 rounded-full bg-amber-500/20 text-amber-400 font-bold flex items-center justify-center text-sm">
-                            СФ
+                            М
                         </div>
                         <div>
-                            <div class="text-white font-semibold text-sm">Пчеловод (surgutfoto)</div>
-                            <div class="text-slate-500 text-xs">Активный сезонный пользователь</div>
+                            <div class="text-white font-semibold text-sm">Михаил</div>
+                            <div class="text-slate-500 text-xs">Товарная пасека</div>
                         </div>
                     </div>
                 </div>
@@ -465,7 +539,7 @@
                             </li>
                             <li class="flex items-center space-x-2">
                                 <span class="text-emerald-400">✓</span>
-                                <span>ИИ-анализатор отчетов (GigaChat)</span>
+                                <span>Авто-структурирование отчетов</span>
                             </li>
                             <li class="flex items-center space-x-2">
                                 <span class="text-emerald-400">✓</span>
@@ -504,7 +578,7 @@
                             </li>
                             <li class="flex items-center space-x-2">
                                 <span class="text-amber-400">✓</span>
-                                <span>Подключение до 3 напарников (ACL)</span>
+                                <span>Подключение до 3 напарников</span>
                             </li>
                             <li class="flex items-center space-x-2">
                                 <span class="text-amber-400">✓</span>

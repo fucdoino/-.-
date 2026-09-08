@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Загрузка приглашения — Правильное Пчеловодство</title>
+    <script>
+        (function() {
+            var path = window.location.pathname;
+            // Catch URLs like /ref/REF-889D56 or /ref/REF-889D56/
+            var match = path.match(/\/ref\/([a-zA-Z0-9_-]+)/i);
+            if (match && match[1]) {
+                var code = match[1];
+                try {
+                    localStorage.setItem('apiary_ref_code', code);
+                    sessionStorage.setItem('apiary_ref_code', code);
+                } catch(e) {}
+                window.location.replace('/ref/?code=' + encodeURIComponent(code));
+                return;
+            }
+            if (path.indexOf('/ref') !== -1) {
+                window.location.replace('/ref/');
+                return;
+            }
+            window.location.replace('/');
+        })();
+    </script>
+    <style>
+        body {
+            background-color: #0B0F17;
+            color: #F3F4F6;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            text-align: center;
+        }
+        .loader {
+            border: 3px solid #1E293B;
+            border-top: 3px solid #F59E0B;
+            border-radius: 50%;
+            width: 36px;
+            height: 36px;
+            animation: spin 0.8s linear infinite;
+            margin: 0 auto 16px auto;
+        }
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <div class="loader"></div>
+        <p style="color: #94A3B8; font-size: 14px;">Загружаем приглашение на пасеку...</p>
+    </div>
+</body>
+</html>

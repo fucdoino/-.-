@@ -165,7 +165,10 @@
             try {
                 const res = await fetch('https://api.xn--80aeaajeaw1actmdbcbhk7au1hze.xn--p1ai/api/payments/create-web', {
                     method: 'POST',
-                    headers: { 'Content-Type': 'application/json' },
+                    headers: { 
+                        'Content-Type': 'application/json',
+                        'Authorization': 'apiary_secret_2026'
+                    },
                     body: JSON.stringify({
                         email: email,
                         promoCode: 'SEASON1500',

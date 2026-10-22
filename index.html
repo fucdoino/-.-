@@ -3,53 +3,100 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Правильное Пчеловодство — Цифровой секретарь вашей пасеки</title>
-    <meta name="description" content="Цифровой секретарь пасеки. Голосовой учет у открытого улья: сохраняйте все детали, увеличивайте силу семей и прибыльность пасеки без блокнотов в воске.">
+    <title>Голос Пасеки — Цифровой секретарь пасеки | ООО «Правильное Пчеловодство»</title>
+    <meta name="description" content="Голос Пасеки — умный цифровой секретарь вашей пасеки от ООО «Правильное Пчеловодство». Голосовой учет у открытого улья в режиме «Свободные руки»: сохраняйте все детали без блокнотов в воске, увеличивайте силу семей и прибыльность пасеки.">
     <link rel="icon" type="image/png" href="favicon.png">
 
     <!-- Open Graph / Telegram / WhatsApp / VK Previews -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://правильноепчеловодство.рф/">
-    <meta property="og:title" content="Правильное Пчеловодство — Цифровой секретарь вашей пасеки">
-    <meta property="og:description" content="Голосовой учет у открытого улья в режиме «Свободные руки». Сохраняйте все детали без блокнотов в воске.">
+    <meta property="og:title" content="Голос Пасеки — Цифровой секретарь пасеки | Правильное Пчеловодство">
+    <meta property="og:description" content="Голосовой учет у открытого улья в режиме «Свободные руки». Сохраняйте все детали без блокнотов в воске. Разработка ООО «Правильное Пчеловодство».">
     <meta property="og:image" content="https://правильноепчеловодство.рф/assets/og_preview.png">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
 
     <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Правильное Пчеловодство — Цифровой секретарь вашей пасеки">
+    <meta name="twitter:title" content="Голос Пасеки — Цифровой секретарь пасеки">
     <meta name="twitter:description" content="Голосовой учет у открытого улья в режиме «Свободные руки». Сохраняйте все детали без блокнотов в воске.">
     <meta name="twitter:image" content="https://правильноепчеловодство.рф/assets/og_preview.png">
 
     <!-- Canonical URL -->
     <link rel="canonical" href="https://правильноепчеловодство.рф/">
 
-    <!-- Schema.org JSON-LD (MobileApplication / SoftwareApplication) -->
+    <!-- Schema.org JSON-LD (SoftwareApplication + Organization + FAQPage) -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "SoftwareApplication",
-      "name": "Правильное Пчеловодство",
-      "alternateName": "Голос Пасеки (Apiary Voice)",
-      "operatingSystem": "Android",
-      "applicationCategory": "BusinessApplication",
-      "applicationSubCategory": "Пчеловодство, Сельское хозяйство",
-      "description": "Умный цифровой секретарь и голосовой журнал для пчеловода. Голосовой учет у открытого улья в режиме «Свободные руки», биологический таймлайн развития расплода, календарь матковода и 100% офлайн работа.",
-      "softwareVersion": "2.0.7",
-      "offers": {
-        "@type": "Offer",
-        "price": "0",
-        "priceCurrency": "RUB",
-        "description": "14 дней бесплатный пробный период без привязки банковской карты"
-      },
-      "downloadUrl": "https://правильноепчеловодство.рф/downloads/apiary-voice-latest.apk",
-      "installUrl": "https://www.rustore.ru/catalog/app/com.apiaryvoice",
-      "author": {
-        "@type": "Organization",
-        "name": "ООО «Правильное Пчеловодство»",
-        "url": "https://правильноепчеловодство.рф/"
-      }
+      "@graph": [
+        {
+          "@type": "SoftwareApplication",
+          "@id": "https://правильноепчеловодство.рф/#app",
+          "name": "Голос Пасеки",
+          "alternateName": ["Цифровой секретарь пасеки", "Apiary Voice", "Правильное Пчеловодство"],
+          "operatingSystem": "Android",
+          "applicationCategory": "BusinessApplication",
+          "applicationSubCategory": "Пчеловодство, Сельское хозяйство",
+          "description": "Умный цифровой секретарь и голосовой журнал для пчеловода. Голосовой учет у открытого улья в режиме «Свободные руки», биологический таймлайн развития расплода, календарь матковода и 100% офлайн работа.",
+          "softwareVersion": "2.0.7",
+          "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "RUB",
+            "description": "14 дней бесплатный пробный период без привязки банковской карты"
+          },
+          "downloadUrl": "https://api.xn--80aeaajeaw1actmdbcbhk7au1hze.xn--p1ai/downloads/apiary-voice-latest.apk",
+          "installUrl": "https://www.rustore.ru/catalog/app/com.apiaryvoice",
+          "author": {
+            "@type": "Organization",
+            "@id": "https://правильноепчеловодство.рф/#organization"
+          }
+        },
+        {
+          "@type": "Organization",
+          "@id": "https://правильноепчеловодство.рф/#organization",
+          "name": "ООО «Правильное Пчеловодство»",
+          "url": "https://правильноепчеловодство.рф/",
+          "logo": "https://правильноепчеловодство.рф/favicon.png",
+          "description": "Проект цифровизации пасек России и разработка голосового ассистента пчеловода «Голос Пасеки»",
+          "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Пермь",
+            "addressCountry": "RU"
+          }
+        },
+        {
+          "@type": "FAQPage",
+          "@id": "https://правильноепчеловодство.рф/#faq",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "А если на точке вообще нет интернета?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Приложение «Голос Пасеки» на 100% автономно. Все голосовые записи сохраняются в зашифрованном виде на самом смартфоне. Как только вы вернетесь в зону связи или подключитесь к домашнему Wi-Fi, все данные автоматически синхронизируются."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Поймет ли программа мои специфические фразы и термины?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Да! Модель обучена именно на лексике пасечников: «сушь», «вощина», «засев», «тянут мисочки», «подставил рамку с пергой», «маточник на выходе». Говорите так, как привыкли в жизни."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Не мешает ли шум пчел и ветер?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Алгоритм фильтрации вырезает посторонний гул и шум ветра, концентрируясь на вашем голосе. Телефон спокойно лежит в нагрудном кармане или на крышке соседнего улья."
+              }
+            }
+          ]
+        }
+      ]
     }
     </script>
 
@@ -126,12 +173,15 @@
     <!-- Header / Navigation -->
     <header class="sticky top-0 z-50 backdrop-blur-md bg-slate-950/90 border-b border-slate-900">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
-            <div class="flex items-center space-x-3">
-                <div class="w-9 h-9 rounded-xl bg-amber-500/10 border border-amber-500/30 flex items-center justify-center text-amber-400 font-bold text-lg">
+            <a href="/" class="flex items-center space-x-3 group">
+                <div class="w-10 h-10 rounded-xl bg-amber-500/10 border border-amber-500/30 flex items-center justify-center text-amber-400 font-bold text-xl shadow-inner group-hover:scale-105 transition-transform">
                     🐝
                 </div>
-                <span class="font-extrabold text-lg tracking-tight text-white">Правильное <span class="text-amber-500">Пчеловодство</span></span>
-            </div>
+                <div class="flex flex-col">
+                    <span class="font-extrabold text-lg tracking-tight text-white leading-none">Голос <span class="text-amber-500">Пасеки</span></span>
+                    <span class="text-[11px] text-slate-400 font-medium mt-1">Цифровой секретарь пасеки • Правильное Пчеловодство</span>
+                </div>
+            </a>
 
             <nav class="hidden md:flex items-center space-x-8 text-sm font-medium text-slate-300">
                 <a href="#how-it-works" class="hover:text-amber-400 transition-colors">Свободные руки</a>
@@ -143,11 +193,11 @@
             </nav>
 
             <div class="flex items-center space-x-3">
-                <a href="https://www.rustore.ru/catalog/app/com.apiaryvoice" target="_blank" rel="noopener" class="px-4 py-2 rounded-xl bg-blue-600 hover:bg-blue-500 text-white font-bold text-sm transition-all shadow-lg shadow-blue-600/25 flex items-center space-x-2">
+                <a href="https://www.rustore.ru/catalog/app/com.apiaryvoice" target="_blank" rel="noopener" onclick="if(typeof ym!=='undefined'){ym(107034465, 'reachGoal', 'click_rustore');}" class="px-4 py-2 rounded-xl bg-blue-600 hover:bg-blue-500 text-white font-bold text-sm transition-all shadow-lg shadow-blue-600/25 flex items-center space-x-2">
                     <svg class="w-4 h-4" viewBox="0 0 24 24" fill="currentColor"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2zm8 3.5l-5 4 5 4V7.5zm1 0v8l5-4-5-4z"/></svg>
                     <span>RuStore</span>
                 </a>
-                <a href="https://api.xn--80aeaajeaw1actmdbcbhk7au1hze.xn--p1ai/downloads/apiary-voice-latest.apk" class="hidden sm:flex px-3.5 py-2 rounded-xl bg-slate-900 hover:bg-slate-800 border border-slate-800 text-slate-300 font-medium text-xs transition-all items-center space-x-1.5">
+                <a href="https://api.xn--80aeaajeaw1actmdbcbhk7au1hze.xn--p1ai/downloads/apiary-voice-latest.apk" onclick="if(typeof ym!=='undefined'){ym(107034465, 'reachGoal', 'click_apk');}" class="hidden sm:flex px-3.5 py-2 rounded-xl bg-slate-900 hover:bg-slate-800 border border-slate-800 text-slate-300 font-medium text-xs transition-all items-center space-x-1.5">
                     <span>Прямой APK</span>
                     <span class="text-xs text-amber-400 font-mono">v2.0.7</span>
                 </a>
@@ -160,16 +210,29 @@
         <div class="absolute inset-0 honey-glow pointer-events-none"></div>
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <div class="text-center max-w-4xl mx-auto">
-                <div class="inline-flex items-center space-x-2 px-3.5 py-1.5 rounded-full bg-amber-500/10 border border-amber-500/30 text-amber-400 text-xs font-semibold uppercase tracking-wider mb-6">
-                    <span>🎙️ Цифровой секретарь вашей пасеки</span>
+                <div class="inline-flex items-center space-x-2.5 px-4 py-2 rounded-full bg-amber-500/10 border border-amber-500/30 text-amber-400 text-xs sm:text-sm font-semibold mb-6 shadow-sm">
+                    <span class="flex items-center space-x-1">
+                        <span class="w-1 h-3.5 bg-amber-400 rounded-full animate-pulse"></span>
+                        <span class="w-1 h-5 bg-amber-500 rounded-full animate-pulse" style="animation-delay: 150ms;"></span>
+                        <span class="w-1 h-2 bg-amber-400 rounded-full animate-pulse" style="animation-delay: 300ms;"></span>
+                        <span class="w-1 h-4 bg-amber-500 rounded-full animate-pulse" style="animation-delay: 450ms;"></span>
+                    </span>
+                    <span>Голос Пасеки — Цифровой секретарь вашей пасеки</span>
                 </div>
                 
-                <h1 class="text-3xl sm:text-5xl lg:text-6xl font-black tracking-tight text-white leading-tight mb-6">
+                <h1 class="text-3xl sm:text-5xl lg:text-6xl font-black tracking-tight text-white leading-tight mb-4">
                     Фиксируйте осмотры голосом прямо у открытого улья — <span class="text-transparent bg-clip-text bg-gradient-to-r from-amber-400 to-amber-600">без потерь, блокнотов и нервов.</span>
                 </h1>
 
+                <!-- Live Voice Command Simulation Banner -->
+                <div class="inline-flex flex-wrap items-center justify-center gap-2 px-4 py-2 rounded-xl bg-slate-900/90 border border-amber-500/25 text-xs text-slate-300 mb-6 font-mono max-w-2xl mx-auto">
+                    <span class="w-2 h-2 rounded-full bg-emerald-500 animate-ping"></span>
+                    <span class="text-amber-400 font-semibold">Голосовой поток:</span>
+                    <span class="italic">«Улей 5, матка на шести рамках, расплод сплошной, дал две вощины»</span>
+                </div>
+
                 <p class="text-lg sm:text-xl text-slate-300 mb-6 max-w-3xl mx-auto leading-relaxed font-normal">
-                    Приложение сохраняет ваши голосовые осмотры, фиксирует абсолютно все детали и само структурирует их так, как удобно именно вам для дальнейшей работы. Экономит кучу времени и сил.
+                    Приложение «Голос Пасеки» сохраняет ваши голосовые осмотры, фиксирует абсолютно все детали и само структурирует их так, как удобно именно вам для дальнейшей работы. Экономит кучу времени и сил.
                 </p>
 
                 <div class="p-4 sm:p-6 rounded-2xl bg-slate-900/80 border border-amber-500/30 max-w-3xl mx-auto mb-10 text-left">
@@ -179,11 +242,11 @@
                 </div>
 
                 <div class="flex flex-col sm:flex-row items-center justify-center gap-4 mb-4">
-                    <a href="https://www.rustore.ru/catalog/app/com.apiaryvoice" target="_blank" rel="noopener" class="w-full sm:w-auto px-8 py-4 rounded-xl bg-blue-600 hover:bg-blue-500 text-white font-extrabold text-base transition-all shadow-xl shadow-blue-600/30 flex items-center justify-center space-x-3">
+                    <a href="https://www.rustore.ru/catalog/app/com.apiaryvoice" target="_blank" rel="noopener" onclick="if(typeof ym!=='undefined'){ym(107034465, 'reachGoal', 'click_rustore');}" class="w-full sm:w-auto px-8 py-4 rounded-xl bg-blue-600 hover:bg-blue-500 text-white font-extrabold text-base transition-all shadow-xl shadow-blue-600/30 flex items-center justify-center space-x-3">
                         <svg class="w-6 h-6" viewBox="0 0 24 24" fill="currentColor"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2zm8 3.5l-5 4 5 4V7.5zm1 0v8l5-4-5-4z"/></svg>
                         <span>Установить из RuStore</span>
                     </a>
-                    <a href="https://api.xn--80aeaajeaw1actmdbcbhk7au1hze.xn--p1ai/downloads/apiary-voice-latest.apk" class="w-full sm:w-auto px-6 py-4 rounded-xl bg-amber-500 hover:bg-amber-400 text-slate-950 font-extrabold text-base transition-all shadow-xl shadow-amber-500/25 flex items-center justify-center space-x-2">
+                    <a href="https://api.xn--80aeaajeaw1actmdbcbhk7au1hze.xn--p1ai/downloads/apiary-voice-latest.apk" onclick="if(typeof ym!=='undefined'){ym(107034465, 'reachGoal', 'click_apk');}" class="w-full sm:w-auto px-6 py-4 rounded-xl bg-amber-500 hover:bg-amber-400 text-slate-950 font-extrabold text-base transition-all shadow-xl shadow-amber-500/25 flex items-center justify-center space-x-2">
                         <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path></svg>
                         <span>Скачать APK напрямую</span>
                     </a>
@@ -350,41 +413,53 @@
                 </p>
             </div>
 
-            <!-- Screenshot Grid (4 Essential Cards in 1 Row) -->
+            <!-- Screenshot Grid (4 Essential Cards in 1 Row with Lightbox) -->
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
                 <!-- Card 1: White screen / Contrast -->
-                <div class="bg-slate-900 border border-slate-800 rounded-2xl p-3 shadow-xl hover:border-amber-500/50 transition-all flex flex-col">
-                    <div class="w-full rounded-xl overflow-hidden mb-3 bg-slate-950 border border-slate-800">
-                        <img src="./assets/screen_1.jpg" alt="Светлая тема интерфейса" class="w-full h-auto object-cover">
+                <div onclick="openLightbox('./assets/screen_1.jpg', 'Светлая и тёмная темы для работы на ярком солнце')" class="bg-slate-900 border border-slate-800 rounded-2xl p-3 shadow-xl hover:border-amber-500/60 hover:shadow-amber-500/10 transition-all flex flex-col cursor-pointer group">
+                    <div class="w-full rounded-xl overflow-hidden mb-3 bg-slate-950 border border-slate-800 relative">
+                        <img src="./assets/screen_1.jpg" alt="Светлая тема интерфейса Голос Пасеки" loading="lazy" decoding="async" class="w-full h-auto object-cover group-hover:scale-105 transition-transform duration-300">
+                        <div class="absolute inset-0 bg-slate-950/20 group-hover:bg-transparent transition-colors flex items-center justify-center">
+                            <span class="opacity-0 group-hover:opacity-100 transition-opacity px-2.5 py-1 rounded-lg bg-slate-950/80 border border-amber-500/40 text-amber-400 text-xs font-semibold shadow-lg backdrop-blur-sm">🔍 Нажмите для просмотра</span>
+                        </div>
                     </div>
-                    <div class="text-sm font-bold text-white mb-1">Светлая и тёмная темы</div>
+                    <div class="text-sm font-bold text-white mb-1 group-hover:text-amber-400 transition-colors">Светлая и тёмная темы</div>
                     <div class="text-xs text-slate-400">Удобно читать на ярком солнце — высокая контрастность и крупный шрифт.</div>
                 </div>
 
                 <!-- Card 2: Central Screen / Hives Hub -->
-                <div class="bg-slate-900 border border-slate-800 rounded-2xl p-3 shadow-xl hover:border-amber-500/50 transition-all flex flex-col">
-                    <div class="w-full rounded-xl overflow-hidden mb-3 bg-slate-950 border border-slate-800">
-                        <img src="./assets/screen_3.jpg" alt="Центральный экран реестра ульев" class="w-full h-auto object-cover">
+                <div onclick="openLightbox('./assets/screen_3.jpg', 'Центральный экран: Реестр всех семей пасеки и быстрый старт записи')" class="bg-slate-900 border border-slate-800 rounded-2xl p-3 shadow-xl hover:border-amber-500/60 hover:shadow-amber-500/10 transition-all flex flex-col cursor-pointer group">
+                    <div class="w-full rounded-xl overflow-hidden mb-3 bg-slate-950 border border-slate-800 relative">
+                        <img src="./assets/screen_3.jpg" alt="Центральный экран реестра ульев Голос Пасеки" loading="lazy" decoding="async" class="w-full h-auto object-cover group-hover:scale-105 transition-transform duration-300">
+                        <div class="absolute inset-0 bg-slate-950/20 group-hover:bg-transparent transition-colors flex items-center justify-center">
+                            <span class="opacity-0 group-hover:opacity-100 transition-opacity px-2.5 py-1 rounded-lg bg-slate-950/80 border border-amber-500/40 text-amber-400 text-xs font-semibold shadow-lg backdrop-blur-sm">🔍 Нажмите для просмотра</span>
+                        </div>
                     </div>
-                    <div class="text-sm font-bold text-white mb-1">Центральный экран пасеки</div>
+                    <div class="text-sm font-bold text-white mb-1 group-hover:text-amber-400 transition-colors">Центральный экран пасеки</div>
                     <div class="text-xs text-slate-400">Реестр всех семей, быстрый запуск записи «Без рук» и статусы ульев в один клик.</div>
                 </div>
 
                 <!-- Card 3: Queen Passport & Breeding -->
-                <div class="bg-slate-900 border border-slate-800 rounded-2xl p-3 shadow-xl hover:border-amber-500/50 transition-all flex flex-col">
-                    <div class="w-full rounded-xl overflow-hidden mb-3 bg-slate-950 border border-slate-800">
-                        <img src="./assets/screen_7.jpg" alt="Паспорт матки и модуль матководства" class="w-full h-auto object-cover">
+                <div onclick="openLightbox('./assets/screen_7.jpg', 'Паспорт матки и модуль матководства: фазы развития расплода и календарь')" class="bg-slate-900 border border-slate-800 rounded-2xl p-3 shadow-xl hover:border-amber-500/60 hover:shadow-amber-500/10 transition-all flex flex-col cursor-pointer group">
+                    <div class="w-full rounded-xl overflow-hidden mb-3 bg-slate-950 border border-slate-800 relative">
+                        <img src="./assets/screen_7.jpg" alt="Паспорт матки и модуль матководства Голос Пасеки" loading="lazy" decoding="async" class="w-full h-auto object-cover group-hover:scale-105 transition-transform duration-300">
+                        <div class="absolute inset-0 bg-slate-950/20 group-hover:bg-transparent transition-colors flex items-center justify-center">
+                            <span class="opacity-0 group-hover:opacity-100 transition-opacity px-2.5 py-1 rounded-lg bg-slate-950/80 border border-amber-500/40 text-amber-400 text-xs font-semibold shadow-lg backdrop-blur-sm">🔍 Нажмите для просмотра</span>
+                        </div>
                     </div>
-                    <div class="text-sm font-bold text-white mb-1">Паспорт матки и матководство</div>
+                    <div class="text-sm font-bold text-white mb-1 group-hover:text-amber-400 transition-colors">Паспорт матки и матководство</div>
                     <div class="text-xs text-slate-400">Контроль породы, графики вывода, даты закладки маточников и контроль облёта.</div>
                 </div>
 
                 <!-- Card 4: Inspection Transcription Detail -->
-                <div class="bg-slate-900 border border-slate-800 rounded-2xl p-3 shadow-xl hover:border-amber-500/50 transition-all flex flex-col">
-                    <div class="w-full rounded-xl overflow-hidden mb-3 bg-slate-950 border border-slate-800">
-                        <img src="./assets/screen_2.jpg" alt="Пример расшифровки голосовой записи" class="w-full h-auto object-cover">
+                <div onclick="openLightbox('./assets/screen_2.jpg', 'Пример расшифровки голосовой записи: автоматическое структурирование данных')" class="bg-slate-900 border border-slate-800 rounded-2xl p-3 shadow-xl hover:border-amber-500/60 hover:shadow-amber-500/10 transition-all flex flex-col cursor-pointer group">
+                    <div class="w-full rounded-xl overflow-hidden mb-3 bg-slate-950 border border-slate-800 relative">
+                        <img src="./assets/screen_2.jpg" alt="Пример расшифровки голосовой записи Голос Пасеки" loading="lazy" decoding="async" class="w-full h-auto object-cover group-hover:scale-105 transition-transform duration-300">
+                        <div class="absolute inset-0 bg-slate-950/20 group-hover:bg-transparent transition-colors flex items-center justify-center">
+                            <span class="opacity-0 group-hover:opacity-100 transition-opacity px-2.5 py-1 rounded-lg bg-slate-950/80 border border-amber-500/40 text-amber-400 text-xs font-semibold shadow-lg backdrop-blur-sm">🔍 Нажмите для просмотра</span>
+                        </div>
                     </div>
-                    <div class="text-sm font-bold text-white mb-1">Пример расшифровки осмотра</div>
+                    <div class="text-sm font-bold text-white mb-1 group-hover:text-amber-400 transition-colors">Пример расшифровки осмотра</div>
                     <div class="text-xs text-slate-400">Автоматическая раскладка: расплод, сила, запасы меда, сушь, вощина и работы.</div>
                 </div>
             </div>
@@ -596,11 +671,11 @@
                 </div>
 
                 <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
-                    <a href="https://www.rustore.ru/catalog/app/com.apiaryvoice" target="_blank" rel="noopener" class="w-full sm:w-auto px-8 py-4 rounded-xl bg-blue-600 hover:bg-blue-500 text-white font-extrabold text-base transition-all shadow-xl shadow-blue-600/30 flex items-center justify-center space-x-2">
+                    <a href="https://www.rustore.ru/catalog/app/com.apiaryvoice" target="_blank" rel="noopener" onclick="if(typeof ym!=='undefined'){ym(107034465, 'reachGoal', 'click_rustore');}" class="w-full sm:w-auto px-8 py-4 rounded-xl bg-blue-600 hover:bg-blue-500 text-white font-extrabold text-base transition-all shadow-xl shadow-blue-600/30 flex items-center justify-center space-x-2">
                         <svg class="w-5 h-5" viewBox="0 0 24 24" fill="currentColor"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2zm8 3.5l-5 4 5 4V7.5zm1 0v8l5-4-5-4z"/></svg>
                         <span>Установить из RuStore</span>
                     </a>
-                    <a href="https://api.xn--80aeaajeaw1actmdbcbhk7au1hze.xn--p1ai/downloads/apiary-voice-latest.apk" class="w-full sm:w-auto px-6 py-4 rounded-xl bg-amber-500 hover:bg-amber-400 text-slate-950 font-extrabold text-base transition-all shadow-xl shadow-amber-500/25 flex items-center justify-center space-x-2">
+                    <a href="https://api.xn--80aeaajeaw1actmdbcbhk7au1hze.xn--p1ai/downloads/apiary-voice-latest.apk" onclick="if(typeof ym!=='undefined'){ym(107034465, 'reachGoal', 'click_apk');}" class="w-full sm:w-auto px-6 py-4 rounded-xl bg-amber-500 hover:bg-amber-400 text-slate-950 font-extrabold text-base transition-all shadow-xl shadow-amber-500/25 flex items-center justify-center space-x-2">
                         <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path></svg>
                         <span>Скачать APK напрямую</span>
                     </a>
@@ -609,22 +684,20 @@
             </div>
         </div>
     </section>
-        </div>
-    </section>
 
     <!-- FAQ SECTION -->
     <section id="faq" class="py-20 border-t border-slate-900">
         <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-16">
                 <h2 class="text-3xl font-extrabold text-white mb-4">Часто задаваемые вопросы</h2>
-                <p class="text-slate-400 text-base">Ответы на главные вопросы пчеловодов перед началом работы.</p>
+                <p class="text-slate-400 text-base">Ответы на главные вопросы пчеловодов перед началом работы с «Голос Пасеки».</p>
             </div>
 
             <div class="space-y-6">
                 <div class="p-6 rounded-2xl bg-slate-900 border border-slate-800">
                     <h3 class="text-base font-bold text-white mb-2">А если на точке вообще нет интернета?</h3>
                     <p class="text-slate-400 text-sm leading-relaxed">
-                        Приложение на 100% автономно. Все голосовые записи сохраняются в зашифрованном виде на самом смартфоне. Как только вы вернетесь в зону связи или подключитесь к домашнему Wi-Fi, все данные автоматически синхронизируются.
+                        Приложение «Голос Пасеки» на 100% автономно. Все голосовые записи сохраняются в зашифрованном виде на самом смартфоне. Как только вы вернетесь в зону связи или подключитесь к домашнему Wi-Fi, все данные автоматически синхронизируются.
                     </p>
                 </div>
 
@@ -646,15 +719,96 @@
     </section>
 
     <!-- FOOTER -->
-    <footer class="py-12 bg-slate-950 border-t border-slate-900 text-center text-slate-500 text-xs">
+    <footer class="py-12 bg-slate-950 border-t border-slate-900 text-center text-slate-500 text-xs pb-28 md:pb-12">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-4">
             <div class="flex items-center justify-center space-x-2 text-slate-300 font-semibold text-sm">
-                <span>🐝 Правильное Пчеловодство</span>
+                <span>🐝 Голос Пасеки</span>
+                <span class="text-slate-600">•</span>
+                <span>ООО «Правильное Пчеловодство»</span>
             </div>
-            <p>Официальный сайт приложения. ООО "Правильное Пчеловодство" г. Пермь • правильноепчеловодство.рф</p>
+            <p>Официальный сайт цифрового секретаря «Голос Пасеки». Проект цифровизации пасек России.</p>
+            <p>ООО «Правильное Пчеловодство», г. Пермь • <a href="https://правильноепчеловодство.рф/" class="text-amber-500 hover:underline">правильноепчеловодство.рф</a></p>
             <p class="text-slate-600">Все права защищены. Разработано для практикующих пчеловодов России.</p>
         </div>
     </footer>
 
+    <!-- SCREENSHOT LIGHTBOX MODAL -->
+    <div id="lightbox-modal" class="fixed inset-0 z-50 hidden bg-black/90 backdrop-blur-md flex items-center justify-center p-4 transition-opacity duration-300 opacity-0" onclick="closeLightbox(event)">
+        <div class="relative max-w-4xl max-h-[90vh] flex flex-col items-center">
+            <button onclick="closeLightboxDirect()" class="absolute -top-12 right-0 sm:-right-8 text-white hover:text-amber-400 p-2 rounded-full bg-slate-900/80 border border-slate-700 transition-colors" title="Закрыть (Esc)">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+            </button>
+            <img id="lightbox-img" src="" alt="Скриншот приложения Голос Пасеки" class="max-h-[80vh] w-auto rounded-2xl shadow-2xl border border-slate-800 object-contain">
+            <div id="lightbox-caption" class="mt-3 text-center text-sm font-semibold text-slate-300"></div>
+        </div>
+    </div>
+
+    <!-- STICKY MOBILE CTA BAR -->
+    <div id="mobile-sticky-bar" class="fixed bottom-0 inset-x-0 z-40 md:hidden bg-slate-950/95 backdrop-blur-lg border-t border-slate-800 p-3 shadow-2xl transition-transform duration-300 transform translate-y-full">
+        <div class="flex items-center justify-between gap-2 max-w-md mx-auto">
+            <div class="flex items-center space-x-2">
+                <div class="w-9 h-9 rounded-lg bg-amber-500/20 border border-amber-500/30 flex items-center justify-center text-amber-400 font-bold text-base">🐝</div>
+                <div class="flex flex-col">
+                    <span class="text-xs font-bold text-white leading-tight">«Голос Пасеки»</span>
+                    <span class="text-[10px] text-amber-400">14 дней бесплатно</span>
+                </div>
+            </div>
+            <div class="flex items-center space-x-2">
+                <a href="https://www.rustore.ru/catalog/app/com.apiaryvoice" target="_blank" rel="noopener" onclick="if(typeof ym!=='undefined'){ym(107034465, 'reachGoal', 'click_rustore');}" class="px-3.5 py-2 rounded-xl bg-blue-600 hover:bg-blue-500 text-white font-bold text-xs transition-all shadow-md shadow-blue-600/30 flex items-center space-x-1">
+                    <span>RuStore</span>
+                </a>
+                <a href="https://api.xn--80aeaajeaw1actmdbcbhk7au1hze.xn--p1ai/downloads/apiary-voice-latest.apk" onclick="if(typeof ym!=='undefined'){ym(107034465, 'reachGoal', 'click_apk');}" class="px-3 py-2 rounded-xl bg-amber-500 hover:bg-amber-400 text-slate-950 font-bold text-xs transition-all shadow-md shadow-amber-500/20 flex items-center space-x-1">
+                    <span>APK</span>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Lightbox logic
+        function openLightbox(src, caption) {
+            const modal = document.getElementById('lightbox-modal');
+            const img = document.getElementById('lightbox-img');
+            const cap = document.getElementById('lightbox-caption');
+            img.src = src;
+            cap.textContent = caption || '';
+            modal.classList.remove('hidden');
+            setTimeout(() => {
+                modal.classList.remove('opacity-0');
+            }, 10);
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeLightboxDirect() {
+            const modal = document.getElementById('lightbox-modal');
+            modal.classList.add('opacity-0');
+            setTimeout(() => {
+                modal.classList.add('hidden');
+                document.getElementById('lightbox-img').src = '';
+                document.body.style.overflow = '';
+            }, 300);
+        }
+
+        function closeLightbox(event) {
+            if (event.target.id === 'lightbox-modal') {
+                closeLightboxDirect();
+            }
+        }
+
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') closeLightboxDirect();
+        });
+
+        // Mobile Sticky Bar scroll trigger
+        window.addEventListener('scroll', () => {
+            const stickyBar = document.getElementById('mobile-sticky-bar');
+            if (!stickyBar) return;
+            if (window.scrollY > 400) {
+                stickyBar.classList.remove('translate-y-full');
+            } else {
+                stickyBar.classList.add('translate-y-full');
+            }
+        });
+    </script>
 </body>
 </html>

@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Подписка на приложение «Голос Пасеки» • ООО «Правильное Пчеловодство»</title>
-    <meta name="description" content="Оформление подписки на цифровой секретарь пасеки «Голос Пасеки». Специальный тариф 1 500 ₽ на полный сезон. ООО «Правильное Пчеловодство».">
-    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <title>Оформление подписки и счёта • «Голос Пасеки» • ООО «Правильное Пчеловодство»</title>
+    <meta name="description" content="Подключение тарифа цифрового секретаря пасеки «Голос Пасеки». Зимняя акция: вся зима в подарок — доступ до 1 февраля 2028 года. Оплата СБП/картой или выставление счёта для ООО, КФХ и СПоК.">
+    <link rel="icon" type="image/png" href="favicon.png">
 
     <!-- Yandex.Metrika counter -->
     <script type="text/javascript">
@@ -32,186 +32,476 @@
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
     <style>
         body { font-family: 'Plus Jakarta Sans', sans-serif; }
-        .honey-glow { box-shadow: 0 0 50px -10px rgba(245, 158, 11, 0.25); }
+        .honey-glow { box-shadow: 0 0 55px -12px rgba(245, 158, 11, 0.25); }
     </style>
 </head>
 <body class="bg-slate-950 text-slate-100 min-h-screen flex flex-col justify-between selection:bg-amber-500 selection:text-slate-950">
 
     <!-- Header -->
-    <header class="border-b border-slate-900 bg-slate-950/80 backdrop-blur sticky top-0 z-50">
-        <div class="max-w-4xl mx-auto px-4 h-16 flex items-center justify-between">
+    <header class="border-b border-slate-900 bg-slate-950/90 backdrop-blur sticky top-0 z-50">
+        <div class="max-w-5xl mx-auto px-4 h-16 flex items-center justify-between">
             <a href="/" class="flex items-center space-x-2.5">
                 <div class="w-9 h-9 rounded-xl bg-gradient-to-tr from-amber-600 to-amber-400 flex items-center justify-center text-slate-950 font-black text-xl shadow-lg shadow-amber-500/20">
                     🐝
                 </div>
                 <div class="flex flex-col">
                     <span class="text-base font-black text-white leading-none">Голос <span class="text-amber-500">Пасеки</span></span>
-                    <span class="text-[11px] text-slate-400 font-semibold mt-0.5">Цифровой секретарь пасеки • Правильное Пчеловодство</span>
+                    <span class="text-[11px] text-slate-400 font-semibold mt-0.5">Цифровой секретарь пасеки • ООО «Правильное Пчеловодство»</span>
                 </div>
             </a>
-            <a href="https://t.me/Hive_ERP_bot" target="_blank" class="text-xs text-slate-400 hover:text-amber-400 transition-colors flex items-center space-x-1">
-                <span>Поддержка в Telegram</span>
+            <a href="https://t.me/Hive_ERP_bot" target="_blank" class="text-xs text-slate-300 hover:text-amber-400 transition-colors flex items-center space-x-1 font-semibold">
+                <span>Связь в Telegram</span>
                 <span class="text-amber-400">→</span>
             </a>
         </div>
     </header>
 
-    <!-- Main Content -->
-    <main class="flex-grow py-12 px-4 sm:px-6">
-        <div class="max-w-xl mx-auto">
-            
-            <div class="text-center mb-8">
-                <div class="inline-flex items-center space-x-2 px-3.5 py-1.5 rounded-full bg-amber-500/10 border border-amber-500/30 text-amber-400 text-xs font-bold mb-4">
-                    <span>🌟 Специальное предложение для опытных пасек</span>
+    <main class="flex-grow py-10 px-4 sm:px-6">
+        <div class="max-w-3xl mx-auto">
+
+            <!-- SUCCESS BANNER (?paid=1) -->
+            <div id="paidSuccessCard" class="hidden mb-8 p-6 sm:p-8 rounded-3xl bg-emerald-950/60 border-2 border-emerald-500 text-center shadow-2xl">
+                <div class="text-4xl mb-3">🎉</div>
+                <h1 class="text-2xl sm:text-3xl font-extrabold text-white mb-2">Оплата принята! Доступ активирован</h1>
+                <p class="text-slate-300 text-sm sm:text-base mb-6 max-w-xl mx-auto">
+                    Ваша подписка открыта прямо сейчас и действует весь предстоящий сезон <b>до 1 февраля 2028 года</b> (вся зима идёт в подарок). Зайдите в приложение под тем же Email — тариф подтянется автоматически.
+                </p>
+                <div class="flex flex-col sm:flex-row justify-center gap-3">
+                    <a href="apiaryvoice://payment-success" class="px-6 py-3.5 rounded-xl bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-extrabold text-sm">
+                        Открыть приложение «Голос Пасеки»
+                    </a>
+                    <a href="https://api.xn--80aeaajeaw1actmdbcbhk7au1hze.xn--p1ai/downloads/apiary-voice-latest.apk" class="px-6 py-3.5 rounded-xl bg-slate-800 hover:bg-slate-700 text-white font-bold text-sm">
+                        Скачать свежий APK (v2.0.8)
+                    </a>
                 </div>
-                <h1 class="text-2xl sm:text-3xl font-extrabold text-white mb-2">
-                    Подписка на Сезон 2027
+            </div>
+
+            <!-- Title & Winter Promo Badge -->
+            <div class="text-center mb-8">
+                <div class="inline-flex items-center space-x-2 px-4 py-1.5 rounded-full bg-emerald-500/15 border border-emerald-500/40 text-emerald-400 text-xs font-bold mb-4">
+                    <span>❄️ Зимнее раннее бронирование: вся зима в подарок — доступ до 1 февраля 2028 г.</span>
+                </div>
+                <h1 class="text-2xl sm:text-4xl font-extrabold text-white mb-2">
+                    Подключение к сезону 2027
                 </h1>
-                <p class="text-slate-400 text-sm">
-                    1 500 ₽ за полный сезон с 1 апреля + вся осень и зима в подарок прямо сейчас!
+                <p class="text-slate-400 text-sm sm:text-base">
+                    Оплатите онлайн картой / СБП за 30 секунд или запросите официальный счёт для ООО, КФХ и кооперативов (СПоК).
                 </p>
             </div>
 
-            <!-- Card -->
-            <div class="p-6 sm:p-8 rounded-3xl bg-slate-900/90 border border-amber-500/40 shadow-2xl honey-glow">
-                
-                <div class="flex items-baseline justify-between border-b border-slate-800 pb-6 mb-6">
+            <!-- Mode Switcher: Online Pay vs B2B Invoice -->
+            <div class="grid grid-cols-2 gap-2 p-1.5 rounded-2xl bg-slate-900 border border-slate-800 mb-8">
+                <button type="button" id="tabCardBtn" onclick="switchMode('card')"
+                    class="py-3 px-4 rounded-xl font-extrabold text-xs sm:text-sm transition-all bg-amber-500 text-slate-950 shadow-lg">
+                    💳 Картой / СБП (ЮKassa)
+                </button>
+                <button type="button" id="tabInvoiceBtn" onclick="switchMode('invoice')"
+                    class="py-3 px-4 rounded-xl font-bold text-xs sm:text-sm transition-all text-slate-300 hover:text-white">
+                    🏢 Счёт для ООО / КФХ / СПоК
+                </button>
+            </div>
+
+            <!-- MODE 1: ONLINE PAYMENT (YOOKASSA) -->
+            <div id="cardModeSection" class="p-6 sm:p-8 rounded-3xl bg-slate-900/90 border border-amber-500/40 shadow-2xl honey-glow">
+                <div class="mb-6">
+                    <label class="block text-xs uppercase tracking-wider font-bold text-slate-400 mb-3">
+                        1. Выберите тариф под вашу пасеку:
+                    </label>
+                    <div id="tariffOptionsGrid" class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                        <!-- Populated by JS -->
+                    </div>
+                </div>
+
+                <!-- Selected Tariff Summary -->
+                <div id="selectedSummaryBox" class="p-4 rounded-2xl bg-slate-950/90 border border-slate-800 mb-6 flex flex-col sm:flex-row sm:items-center justify-between gap-3">
                     <div>
-                        <span class="text-xs uppercase font-bold text-slate-400 tracking-wider">Тариф</span>
-                        <div class="text-lg font-extrabold text-white">«Первый сезон 2027»</div>
+                        <div id="summaryTitle" class="text-base font-extrabold text-white">Товарная пасека 150</div>
+                        <div id="summaryDesc" class="text-xs text-slate-400 mt-0.5">До 150 ульев • Безлимит ВетГИС («Хорриот») • 2 человека</div>
                     </div>
-                    <div class="text-right">
-                        <div class="text-3xl sm:text-4xl font-black text-amber-400">1 500 ₽</div>
-                        <span class="text-[11px] text-emerald-400 font-semibold">Осень и зима в подарок</span>
-                    </div>
-                </div>
-
-                <!-- Features -->
-                <div class="space-y-2.5 mb-8 text-sm text-slate-300">
-                    <div class="flex items-center space-x-2.5">
-                        <span class="text-emerald-400 font-bold">✓</span>
-                        <span><b>Карманный режим</b> — диктовка через гарнитуру с выключенным экраном</span>
-                    </div>
-                    <div class="flex items-center space-x-2.5">
-                        <span class="text-emerald-400 font-bold">✓</span>
-                        <span><b>100% офлайн</b> — полная автономность без связи в глухом лесу</span>
-                    </div>
-                    <div class="flex items-center space-x-2.5">
-                        <span class="text-emerald-400 font-bold">✓</span>
-                        <span><b>Безлимит ульев</b> — учет любого масштаба пасеки</span>
-                    </div>
-                    <div class="flex items-center space-x-2.5">
-                        <span class="text-emerald-400 font-bold">✓</span>
-                        <span><b>Модуль маток и расплода</b> — расчет фаз развития и график прививок</span>
-                    </div>
-                    <div class="flex items-center space-x-2.5">
-                        <span class="text-emerald-400 font-bold">✓</span>
-                        <span><b>Умные пуши и подсказки</b> — напоминания о плановых осмотрах</span>
+                    <div class="text-left sm:text-right shrink-0">
+                        <div id="summaryPrice" class="text-2xl sm:text-3xl font-black text-amber-400">4 990 ₽</div>
+                        <div id="summaryBonus" class="text-[11px] text-emerald-400 font-semibold">Доступ до 01.02.2028</div>
                     </div>
                 </div>
 
-                <!-- Payment Form -->
+                <!-- Online Payment Form -->
                 <form id="payForm" class="space-y-4">
                     <div>
                         <label for="email" class="block text-xs font-semibold text-slate-300 mb-1.5">
-                            Ваш Email (привязанный к приложению):
+                            2. Ваш Email (под которым входите в приложение «Голос Пасеки»):
                         </label>
-                        <input type="email" id="email" required placeholder="pchelovod@mail.ru"
+                        <input type="email" id="email" required placeholder="pchelovod@yandex.ru"
                             class="w-full px-4 py-3.5 rounded-xl bg-slate-950 border border-slate-700 text-white placeholder-slate-500 focus:outline-none focus:border-amber-500 focus:ring-1 focus:ring-amber-500 text-sm">
                     </div>
 
-                    <div id="errorMsg" class="hidden text-xs text-rose-400 bg-rose-500/10 border border-rose-500/20 rounded-lg p-3"></div>
+                    <div>
+                        <label for="promoCode" class="block text-xs font-semibold text-slate-400 mb-1.5">
+                            Промокод или код рекомендации коллеги (если есть):
+                        </label>
+                        <div class="flex gap-2">
+                            <input type="text" id="promoCode" placeholder="Необязательно"
+                                class="flex-grow px-4 py-3 rounded-xl bg-slate-950 border border-slate-800 text-white placeholder-slate-600 focus:outline-none focus:border-amber-500 text-sm uppercase">
+                            <button type="button" onclick="checkPromo()"
+                                class="px-4 py-3 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-200 font-bold text-xs shrink-0 transition-colors">
+                                Проверить
+                            </button>
+                        </div>
+                        <div id="promoStatus" class="hidden mt-2 text-xs font-semibold"></div>
+                    </div>
+
+                    <div id="errorMsg" class="hidden text-xs text-rose-400 bg-rose-500/10 border border-rose-500/20 rounded-xl p-3"></div>
 
                     <button type="submit" id="submitBtn"
                         class="w-full py-4 px-6 rounded-xl bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-400 hover:to-amber-500 text-slate-950 font-extrabold text-base transition-all shadow-xl shadow-amber-500/25 flex items-center justify-center space-x-2 cursor-pointer">
-                        <svg class="w-5 h-5 text-slate-950" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z"></path></svg>
-                        <span>Оплатить 1 500 ₽ через ЮKassa</span>
+                        <span id="submitBtnText">Оплатить 4 990 ₽ через СБП / Карту РФ</span>
                     </button>
 
-                    <div class="flex items-center justify-center space-x-3 text-[11px] text-slate-400 pt-2">
-                        <span>🔒 Безопасная оплата:</span>
-                        <span class="text-slate-300 font-semibold">СБП</span>
+                    <div class="flex flex-wrap items-center justify-center gap-2 text-[11px] text-slate-400 pt-2">
+                        <span>🔒 Официальный чек 54-ФЗ от ООО «Правильное Пчеловодство»</span>
                         <span>•</span>
-                        <span class="text-slate-300 font-semibold">МИР / Карты РФ</span>
-                        <span>•</span>
-                        <span class="text-slate-300 font-semibold">SberPay</span>
+                        <span class="text-slate-300 font-semibold">СБП / МИР / SberPay</span>
                     </div>
                 </form>
-
             </div>
 
-            <!-- Notice -->
+            <!-- MODE 2: B2B INVOICE REQUEST (ООО / КФХ / СПоК) -->
+            <div id="invoiceModeSection" class="hidden p-6 sm:p-8 rounded-3xl bg-slate-900/90 border border-amber-500/40 shadow-2xl honey-glow">
+                <div class="mb-6">
+                    <h2 class="text-xl font-extrabold text-white mb-1">Выставление счёта для ООО, ИП, КФХ и СПоК</h2>
+                    <p class="text-xs sm:text-sm text-slate-400">
+                        Официальный договор и закрывающие документы (без НДС) от ООО «Правильное Пчеловодство» (ИНН 9701301980). Подходит для отчётности по грантам «Агростартап» и субсидиям Минсельхоза.
+                    </p>
+                </div>
+
+                <div id="invoiceSuccessBox" class="hidden p-5 rounded-2xl bg-emerald-950/70 border border-emerald-500 text-emerald-200 text-sm mb-6"></div>
+
+                <form id="invoiceForm" class="space-y-4">
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        <div>
+                            <label class="block text-xs font-semibold text-slate-300 mb-1.5">Название ООО / КФХ / ИП / СПоК *</label>
+                            <input type="text" id="invOrgName" required placeholder="КФХ Иванов И.И. / ООО Пасека"
+                                class="w-full px-4 py-3 rounded-xl bg-slate-950 border border-slate-700 text-white text-sm focus:outline-none focus:border-amber-500">
+                        </div>
+                        <div>
+                            <label class="block text-xs font-semibold text-slate-300 mb-1.5">ИНН организации / ИП</label>
+                            <input type="text" id="invInn" placeholder="Например: 5900000000"
+                                class="w-full px-4 py-3 rounded-xl bg-slate-950 border border-slate-700 text-white text-sm focus:outline-none focus:border-amber-500">
+                        </div>
+                    </div>
+
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        <div>
+                            <label class="block text-xs font-semibold text-slate-300 mb-1.5">Контактный телефон (WhatsApp / Telegram) *</label>
+                            <input type="tel" id="invPhone" required placeholder="+7 (900) 000-00-00"
+                                class="w-full px-4 py-3 rounded-xl bg-slate-950 border border-slate-700 text-white text-sm focus:outline-none focus:border-amber-500">
+                        </div>
+                        <div>
+                            <label class="block text-xs font-semibold text-slate-300 mb-1.5">Email для отправки счёта и доступа *</label>
+                            <input type="email" id="invEmail" required placeholder="buh@paseka.ru"
+                                class="w-full px-4 py-3 rounded-xl bg-slate-950 border border-slate-700 text-white text-sm focus:outline-none focus:border-amber-500">
+                        </div>
+                    </div>
+
+                    <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+                        <div class="sm:col-span-1">
+                            <label class="block text-xs font-semibold text-slate-300 mb-1.5">Тариф по счёту</label>
+                            <select id="invTariff" class="w-full px-3 py-3 rounded-xl bg-slate-950 border border-slate-700 text-white text-sm focus:outline-none focus:border-amber-500">
+                                <option value="cooperative_max">Кооператив 400+ — 45 000 ₽</option>
+                                <option value="selection_team">Селекция Команда (3 чел.) — 16 990 ₽</option>
+                                <option value="selection_400">Селекция 400 (1 чел.) — 8 990 ₽</option>
+                                <option value="commercial_150">Товарная пасека 150 — 4 990 ₽</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label class="block text-xs font-semibold text-slate-300 mb-1.5">Кол-во пчелосемей</label>
+                            <input type="number" id="invHives" value="200" min="1"
+                                class="w-full px-4 py-3 rounded-xl bg-slate-950 border border-slate-700 text-white text-sm focus:outline-none focus:border-amber-500">
+                        </div>
+                        <div>
+                            <label class="block text-xs font-semibold text-slate-300 mb-1.5">Сотрудников в штате</label>
+                            <input type="number" id="invMembers" value="3" min="1"
+                                class="w-full px-4 py-3 rounded-xl bg-slate-950 border border-slate-700 text-white text-sm focus:outline-none focus:border-amber-500">
+                        </div>
+                    </div>
+
+                    <div>
+                        <label class="block text-xs font-semibold text-slate-300 mb-1.5">Комментарий (нужен ли договор для гранта / ЭДО Диадок)</label>
+                        <textarea id="invComment" rows="2" placeholder="Например: нужен счёт и договор для отчётности по гранту Агростартап"
+                            class="w-full px-4 py-3 rounded-xl bg-slate-950 border border-slate-700 text-white text-sm focus:outline-none focus:border-amber-500"></textarea>
+                    </div>
+
+                    <div id="invErrorBox" class="hidden text-xs text-rose-400 bg-rose-500/10 border border-rose-500/20 rounded-xl p-3"></div>
+
+                    <button type="submit" id="invSubmitBtn"
+                        class="w-full py-4 px-6 rounded-xl bg-amber-500 hover:bg-amber-400 text-slate-950 font-extrabold text-base transition-all shadow-xl shadow-amber-500/25 cursor-pointer">
+                        Запросить счёт от ООО «Правильное Пчеловодство»
+                    </button>
+                </form>
+            </div>
+
+            <!-- Direct Contact -->
             <div class="mt-8 text-center text-xs text-slate-400 leading-relaxed">
-                Есть вопросы по оплате? Напишите создателю Николаю напрямую в Telegram: 
-                <a href="https://t.me/Hive_ERP_bot" class="text-amber-400 hover:underline font-semibold">@Hive_ERP_bot</a>
-                или ответом на письмо.
+                Нужна консультация перед подключением крупной пасеки или кооператива? Позвоните или напишите руководителю проекта Николаю напрямую:
+                <a href="tel:+79027929772" class="text-white font-bold hover:text-amber-400">+7 (902) 792-97-72</a> •
+                <a href="https://t.me/Hive_ERP_bot" target="_blank" class="text-amber-400 hover:underline font-semibold">@Hive_ERP_bot</a>
             </div>
-
         </div>
     </main>
 
-    <!-- Footer -->
-    <footer class="border-t border-slate-900 bg-slate-950 py-6 text-center text-xs text-slate-400">
-        <p>© 2026 ООО «Правильное Пчеловодство», г. Пермь. Все права защищены.</p>
+    <footer class="border-t border-slate-900 bg-slate-950 py-6 text-center text-xs text-slate-500">
+        <p>© 2026 ООО «Правильное Пчеловодство» (ИНН 9701301980, ОГРН 1247700770305), г. Пермь.</p>
     </footer>
 
     <script>
-        // Auto-fill email from query param
-        const urlParams = new URLSearchParams(window.location.search);
-        const emailParam = urlParams.get('email');
-        if (emailParam) {
-            document.getElementById('email').value = emailParam.trim();
+        const API_BASE = 'https://api.xn--80aeaajeaw1actmdbcbhk7au1hze.xn--p1ai/api/payments';
+
+        const TARIFFS = [
+            {
+                code: 'smart_50',
+                title: 'Умная пасека 50',
+                badge: 'ЛПХ до 50 ульев',
+                price: 1000,
+                desc: 'До 50 ульев • Безлимит голосовых осмотров и офлайн-режим',
+                bonus: 'Зима в подарок • до 01.02.2028'
+            },
+            {
+                code: 'commercial_150',
+                title: 'Товарная пасека 150',
+                badge: 'Хит КФХ',
+                price: 4990,
+                desc: 'До 150 ульев • Безлимит ВетГИС («Хорриот») • Бригада до 2 чел.',
+                bonus: 'Зима в подарок • до 01.02.2028',
+                popular: true
+            },
+            {
+                code: 'selection_400',
+                title: 'Селекция 400 (1 чел.)',
+                badge: 'Матководам',
+                price: 8990,
+                desc: 'До 400 ульев • Племенное ядро F0/F1 и графики прививок • ВетГИС',
+                bonus: 'Зима в подарок • до 01.02.2028'
+            },
+            {
+                code: 'selection_team',
+                title: 'Селекция Команда (3 чел.)',
+                badge: 'Племенная бригада',
+                price: 16990,
+                desc: 'До 400 ульев • Селекция F0/F1 • ВетГИС • Штат до 3 человек',
+                bonus: 'Зима в подарок • до 01.02.2028'
+            },
+            {
+                code: 'cooperative_max',
+                title: 'Кооператив 400+',
+                badge: 'Агробизнес / СПоК',
+                price: 45000,
+                desc: 'Безлимит ульев • Штат до 15+ чел. • Селекция и ВетГИС',
+                bonus: 'Зима в подарок • до 01.02.2028'
+            },
+            {
+                code: 'vetgis_unlim_2490',
+                title: 'Опция: Безлимит ВетГИС',
+                badge: 'К тарифу 50',
+                price: 2490,
+                desc: 'Безлимитная выгрузка ведомостей ВетГИС («Хорриот») в Excel',
+                bonus: 'Действует до 01.02.2028'
+            }
+        ];
+
+        let selectedCode = 'commercial_150';
+        let customDiscountPrice = null;
+
+        function formatRub(n) {
+            return Number(n).toLocaleString('ru-RU') + ' ₽';
         }
 
-        const form = document.getElementById('payForm');
-        const submitBtn = document.getElementById('submitBtn');
-        const errorMsg = document.getElementById('errorMsg');
+        function renderTariffs() {
+            const grid = document.getElementById('tariffOptionsGrid');
+            grid.innerHTML = TARIFFS.map(t => {
+                const active = t.code === selectedCode;
+                return `
+                    <div onclick="selectTariff('${t.code}')"
+                         class="p-4 rounded-2xl border cursor-pointer transition-all ${active ? 'bg-amber-500/10 border-amber-500 shadow-lg' : 'bg-slate-950/60 border-slate-800 hover:border-slate-700'}">
+                        <div class="flex items-center justify-between mb-1">
+                            <span class="text-sm font-extrabold text-white">${t.title}</span>
+                            <span class="text-[10px] font-bold px-2 py-0.5 rounded-full ${t.popular ? 'bg-amber-500 text-slate-950' : 'bg-slate-800 text-slate-300'}">${t.badge}</span>
+                        </div>
+                        <div class="text-lg font-black ${active ? 'text-amber-400' : 'text-slate-200'}">${formatRub(t.price)}</div>
+                        <div class="text-[11px] text-slate-400 mt-1 leading-snug">${t.desc}</div>
+                    </div>
+                `;
+            }).join('');
 
-        form.addEventListener('submit', async (e) => {
+            const current = TARIFFS.find(t => t.code === selectedCode) || TARIFFS[1];
+            const finalPrice = customDiscountPrice !== null ? customDiscountPrice : current.price;
+            document.getElementById('summaryTitle').textContent = current.title;
+            document.getElementById('summaryDesc').textContent = current.desc;
+            document.getElementById('summaryPrice').textContent = formatRub(finalPrice);
+            document.getElementById('summaryBonus').textContent = current.bonus;
+            document.getElementById('submitBtnText').textContent = `Оплатить ${formatRub(finalPrice)} через СБП / Карту РФ`;
+        }
+
+        function selectTariff(code) {
+            selectedCode = code;
+            customDiscountPrice = null;
+            document.getElementById('promoStatus').classList.add('hidden');
+            renderTariffs();
+        }
+
+        function switchMode(mode) {
+            const isInvoice = mode === 'invoice';
+            document.getElementById('cardModeSection').classList.toggle('hidden', isInvoice);
+            document.getElementById('invoiceModeSection').classList.toggle('hidden', !isInvoice);
+            document.getElementById('tabCardBtn').className = isInvoice
+                ? 'py-3 px-4 rounded-xl font-bold text-xs sm:text-sm transition-all text-slate-300 hover:text-white'
+                : 'py-3 px-4 rounded-xl font-extrabold text-xs sm:text-sm transition-all bg-amber-500 text-slate-950 shadow-lg';
+            document.getElementById('tabInvoiceBtn').className = isInvoice
+                ? 'py-3 px-4 rounded-xl font-extrabold text-xs sm:text-sm transition-all bg-amber-500 text-slate-950 shadow-lg'
+                : 'py-3 px-4 rounded-xl font-bold text-xs sm:text-sm transition-all text-slate-300 hover:text-white';
+        }
+
+        async function checkPromo() {
+            const code = document.getElementById('promoCode').value.trim();
+            const statusEl = document.getElementById('promoStatus');
+            if (!code) return;
+            statusEl.classList.remove('hidden');
+            statusEl.className = 'mt-2 text-xs font-semibold text-slate-400';
+            statusEl.textContent = 'Проверяем код...';
+            try {
+                const res = await fetch(`${API_BASE}/validate-promo`, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ promoCode: code })
+                });
+                const data = await res.json();
+                if (data.valid) {
+                    statusEl.className = 'mt-2 text-xs font-semibold text-emerald-400';
+                    statusEl.textContent = '✓ ' + (data.message || 'Код принят!');
+                    if (typeof data.discountPriceRub === 'number' && data.discountPriceRub > 0 && selectedCode === 'smart_50') {
+                        customDiscountPrice = data.discountPriceRub;
+                        renderTariffs();
+                    }
+                } else {
+                    statusEl.className = 'mt-2 text-xs font-semibold text-rose-400';
+                    statusEl.textContent = '✗ ' + (data.message || 'Код не найден');
+                }
+            } catch (_e) {
+                statusEl.className = 'mt-2 text-xs font-semibold text-rose-400';
+                statusEl.textContent = 'Не удалось проверить код, попробуйте при оплате';
+            }
+        }
+
+        // Init from URL query parameters
+        const params = new URLSearchParams(window.location.search);
+        if (params.get('paid') === '1') {
+            document.getElementById('paidSuccessCard').classList.remove('hidden');
+            if (typeof ym !== 'undefined') ym(107034465, 'reachGoal', 'payment_success');
+        }
+        if (params.get('tariff') && TARIFFS.some(t => t.code === params.get('tariff'))) {
+            selectedCode = params.get('tariff');
+            const invSelect = document.getElementById('invTariff');
+            if ([...invSelect.options].some(o => o.value === selectedCode)) {
+                invSelect.value = selectedCode;
+            }
+        }
+        if (params.get('email')) {
+            document.getElementById('email').value = params.get('email').trim();
+            document.getElementById('invEmail').value = params.get('email').trim();
+        }
+        if (params.get('promo') || params.get('ref')) {
+            document.getElementById('promoCode').value = (params.get('promo') || params.get('ref')).trim();
+        }
+        if (params.get('hives')) {
+            document.getElementById('invHives').value = params.get('hives').trim();
+        }
+        if (params.get('org')) {
+            document.getElementById('invOrgName').value = params.get('org').trim();
+        }
+        if (params.get('mode') === 'invoice') {
+            switchMode('invoice');
+        }
+        renderTariffs();
+
+        // Handle YooKassa form submit
+        document.getElementById('payForm').addEventListener('submit', async (e) => {
             e.preventDefault();
+            const errorMsg = document.getElementById('errorMsg');
+            const submitBtn = document.getElementById('submitBtn');
             errorMsg.classList.add('hidden');
+
             const email = document.getElementById('email').value.trim();
+            const promoCode = document.getElementById('promoCode').value.trim();
             if (!email) return;
 
             submitBtn.disabled = true;
-            submitBtn.innerHTML = `
-                <svg class="animate-spin -ml-1 mr-2 h-5 w-5 text-slate-950" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
-                    <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
-                    <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
-                </svg>
-                <span>Переход к оплате...</span>
-            `;
+            document.getElementById('submitBtnText').textContent = 'Переход в платёжный шлюз ЮKassa...';
 
             try {
-                const res = await fetch('https://api.xn--80aeaajeaw1actmdbcbhk7au1hze.xn--p1ai/api/payments/create-web', {
+                if (typeof ym !== 'undefined') ym(107034465, 'reachGoal', 'start_checkout', { tariff: selectedCode });
+                const res = await fetch(`${API_BASE}/create-web`, {
                     method: 'POST',
-                    headers: { 
-                        'Content-Type': 'application/json',
-                        'Authorization': 'apiary_secret_2026'
-                    },
+                    headers: { 'Content-Type': 'application/json' },
                     body: JSON.stringify({
-                        email: email,
-                        promoCode: 'SEASON1500',
-                        tariffCode: 'season_pass',
-                        returnUrl: 'https://правильноепчеловодство.рф/'
+                        email,
+                        tariffCode: selectedCode,
+                        promoCode: promoCode || undefined,
+                        returnUrl: `https://правильноепчеловодство.рф/pay.html?paid=1&tariff=${encodeURIComponent(selectedCode)}`
                     })
                 });
-
                 const data = await res.json();
                 if (data.success && data.confirmationUrl) {
                     window.location.href = data.confirmationUrl;
                 } else {
-                    throw new Error(data.error || 'Ошибка создания счета в банке');
+                    throw new Error(data.error || 'Ошибка создания платежа');
                 }
             } catch (err) {
-                console.error(err);
-                errorMsg.textContent = 'Ошибка: ' + (err.message || 'Не удалось связаться с платежным шлюзом. Пожалуйста, напишите нам в Telegram @Hive_ERP_bot');
+                errorMsg.textContent = err.message || 'Не удалось связаться с платёжным шлюзом. Напишите нам в @Hive_ERP_bot';
                 errorMsg.classList.remove('hidden');
                 submitBtn.disabled = false;
-                submitBtn.innerHTML = `
-                    <svg class="w-5 h-5 text-slate-950" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z"></path></svg>
-                    <span>Оплатить 1 500 ₽ через ЮKassa</span>
-                `;
+                renderTariffs();
+            }
+        });
+
+        // Handle B2B Invoice form submit
+        document.getElementById('invoiceForm').addEventListener('submit', async (e) => {
+            e.preventDefault();
+            const errBox = document.getElementById('invErrorBox');
+            const okBox = document.getElementById('invoiceSuccessBox');
+            const btn = document.getElementById('invSubmitBtn');
+            errBox.classList.add('hidden');
+            okBox.classList.add('hidden');
+            btn.disabled = true;
+            btn.textContent = 'Отправляем заявку...';
+
+            try {
+                if (typeof ym !== 'undefined') ym(107034465, 'reachGoal', 'request_b2b_invoice');
+                const res = await fetch(`${API_BASE}/cooperative-invoice`, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({
+                        orgName: document.getElementById('invOrgName').value.trim(),
+                        inn: document.getElementById('invInn').value.trim(),
+                        phone: document.getElementById('invPhone').value.trim(),
+                        email: document.getElementById('invEmail').value.trim(),
+                        tariffCode: document.getElementById('invTariff').value,
+                        hivesCount: parseInt(document.getElementById('invHives').value || '150', 10),
+                        membersCount: parseInt(document.getElementById('invMembers').value || '3', 10),
+                        comment: document.getElementById('invComment').value.trim()
+                    })
+                });
+                const data = await res.json();
+                if (data.success) {
+                    okBox.innerHTML = '<b>✅ Заявка отправлена руководителю проекта!</b><br>Мы подготовим счёт от ООО «Правильное Пчеловодство» и свяжемся с вами по указанному телефону и Email в ближайшее время.';
+                    okBox.classList.remove('hidden');
+                    document.getElementById('invoiceForm').reset();
+                } else {
+                    throw new Error(data.error || 'Ошибка отправки заявки');
+                }
+            } catch (err) {
+                errBox.textContent = err.message || 'Ошибка сети. Позвоните нам +7 (902) 792-97-72 или напишите в @Hive_ERP_bot';
+                errBox.classList.remove('hidden');
+            } finally {
+                btn.disabled = false;
+                btn.textContent = 'Запросить счёт от ООО «Правильное Пчеловодство»';
             }
         });
     </script>

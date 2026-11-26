@@ -39,12 +39,12 @@
           "applicationCategory": "BusinessApplication",
           "applicationSubCategory": "Пчеловодство, Сельское хозяйство",
           "description": "Умный цифровой секретарь и голосовой журнал для пчеловода. Голосовой учет у открытого улья в режиме «Свободные руки», биологический таймлайн развития расплода, календарь матковода и 100% офлайн работа.",
-          "softwareVersion": "2.0.7",
+          "softwareVersion": "2.0.8",
           "offers": {
             "@type": "Offer",
             "price": "0",
             "priceCurrency": "RUB",
-            "description": "14 дней бесплатный пробный период без привязки банковской карты"
+            "description": "Тариф Любитель (до 10 ульев) — 0 ₽ навсегда без привязки банковской карты"
           },
           "downloadUrl": "https://api.xn--80aeaajeaw1actmdbcbhk7au1hze.xn--p1ai/downloads/apiary-voice-latest.apk",
           "installUrl": "https://www.rustore.ru/catalog/app/com.apiaryvoice",
@@ -199,7 +199,10 @@
                 </a>
                 <a href="https://api.xn--80aeaajeaw1actmdbcbhk7au1hze.xn--p1ai/downloads/apiary-voice-latest.apk" onclick="if(typeof ym!=='undefined'){ym(107034465, 'reachGoal', 'click_apk');}" class="hidden sm:flex px-3.5 py-2 rounded-xl bg-slate-900 hover:bg-slate-800 border border-slate-800 text-slate-300 font-medium text-xs transition-all items-center space-x-1.5">
                     <span>Прямой APK</span>
-                    <span class="text-xs text-amber-400 font-mono">v2.0.7</span>
+                    <span class="text-xs text-amber-400 font-mono">v2.0.8</span>
+                </a>
+                <a href="/pay.html" class="hidden lg:flex px-4 py-2 rounded-xl bg-amber-500 hover:bg-amber-400 text-slate-950 font-extrabold text-xs transition-all shadow-lg shadow-amber-500/20 items-center space-x-1.5">
+                    <span>Оплатить / Счёт</span>
                 </a>
             </div>
         </div>
@@ -618,69 +621,137 @@
     <!-- PRICING & TARIFFS -->
     <section id="pricing" class="py-20 bg-slate-900/40 border-t border-slate-900">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center max-w-3xl mx-auto mb-12">
-                <div class="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-amber-500/10 border border-amber-500/30 text-amber-400 text-xs font-semibold mb-4">
-                    <span>🍯 Честные условия под вашу пасеку</span>
+            <div class="text-center max-w-3xl mx-auto mb-10">
+                <div class="inline-flex items-center space-x-2 px-4 py-1.5 rounded-full bg-emerald-500/15 border border-emerald-500/40 text-emerald-400 text-xs sm:text-sm font-bold mb-4">
+                    <span>❄️ Зимняя акция: вся зима в подарок — доступ сразу и до 1 февраля 2028 года!</span>
                 </div>
                 <h2 class="text-3xl sm:text-4xl font-extrabold text-white mb-4">
-                    Стоимость подписки
+                    Тарифы под размер вашей пасеки
                 </h2>
                 <p class="text-slate-400 text-base">
-                    Первые 2 недели — полностью бесплатный тестовый период на вашей пасеке.
+                    Начните бесплатно до 10 ульев без привязки карты или подключите профессиональный тариф с отчётностью для «Хорриота» и командной работой.
                 </p>
             </div>
 
-            <!-- Single highlighted tariff: Первый год за 1000 рублей -->
-            <div class="max-w-2xl mx-auto p-8 sm:p-10 rounded-3xl bg-gradient-to-b from-slate-900 to-slate-950 border-2 border-amber-500/60 shadow-2xl honey-glow text-center relative overflow-hidden">
-                <div class="inline-flex items-center space-x-2 px-4 py-1.5 rounded-full bg-amber-500 text-slate-950 font-black text-xs uppercase tracking-wider mb-6">
-                    ⭐ Тариф на первый год
-                </div>
+            <!-- 4 Main Cards Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-6 mb-8">
 
-                <div class="text-5xl sm:text-6xl font-black text-white mb-3">
-                    1 000 ₽ <span class="text-base sm:text-lg text-slate-400 font-normal">/ на 12 месяцев</span>
-                </div>
-                <p class="text-amber-400 text-sm font-semibold mb-8">
-                    Полный доступ ко всем возможностям цифрового секретаря на целый год
-                </p>
-
-                <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-left max-w-lg mx-auto mb-10 text-sm text-slate-300">
-                    <div class="flex items-center space-x-2">
-                        <span class="text-emerald-400 font-bold">✓</span>
-                        <span>Голосовой ввод «Без рук»</span>
+                <!-- 1. Любитель (Freemium) -->
+                <div class="p-6 rounded-3xl bg-slate-900/80 border border-slate-800 flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center justify-between mb-3">
+                            <span class="text-xs font-bold uppercase tracking-wider text-slate-400">До 10 ульев</span>
+                            <span class="px-2.5 py-0.5 rounded-full bg-slate-800 text-slate-300 text-[11px] font-semibold">Старт</span>
+                        </div>
+                        <h3 class="text-xl font-extrabold text-white mb-2">Любитель</h3>
+                        <div class="text-3xl font-black text-white mb-1">0 ₽ <span class="text-xs font-normal text-slate-400">/ навсегда</span></div>
+                        <p class="text-xs text-slate-400 mb-6">Для знакомства с голосовым учётом на небольшой приусадебной пасеке</p>
+                        <ul class="space-y-2.5 text-sm text-slate-300 mb-6">
+                            <li class="flex items-start space-x-2"><span class="text-emerald-400 font-bold">✓</span><span>До <b>10 пчелосемей</b> в журнале</span></li>
+                            <li class="flex items-start space-x-2"><span class="text-emerald-400 font-bold">✓</span><span>До <b>15 голосовых осмотров</b> в месяц</span></li>
+                            <li class="flex items-start space-x-2"><span class="text-emerald-400 font-bold">✓</span><span>100% офлайн-запись на точке</span></li>
+                            <li class="flex items-start space-x-2"><span class="text-emerald-400 font-bold">✓</span><span>1 пользователь, без привязки карты</span></li>
+                        </ul>
                     </div>
-                    <div class="flex items-center space-x-2">
-                        <span class="text-emerald-400 font-bold">✓</span>
-                        <span>100% офлайн в глухом лесу</span>
-                    </div>
-                    <div class="flex items-center space-x-2">
-                        <span class="text-emerald-400 font-bold">✓</span>
-                        <span>Учет ульев без ограничений</span>
-                    </div>
-                    <div class="flex items-center space-x-2">
-                        <span class="text-emerald-400 font-bold">✓</span>
-                        <span>Контроль цикла расплода</span>
-                    </div>
-                    <div class="flex items-center space-x-2">
-                        <span class="text-emerald-400 font-bold">✓</span>
-                        <span>Календарь вывода маток</span>
-                    </div>
-                    <div class="flex items-center space-x-2">
-                        <span class="text-emerald-400 font-bold">✓</span>
-                        <span>Авто-структурирование отчетов</span>
-                    </div>
-                </div>
-
-                <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
-                    <a href="https://www.rustore.ru/catalog/app/com.apiaryvoice" target="_blank" rel="noopener" onclick="if(typeof ym!=='undefined'){ym(107034465, 'reachGoal', 'click_rustore');}" class="w-full sm:w-auto px-8 py-4 rounded-xl bg-blue-600 hover:bg-blue-500 text-white font-extrabold text-base transition-all shadow-xl shadow-blue-600/30 flex items-center justify-center space-x-2">
-                        <svg class="w-5 h-5" viewBox="0 0 24 24" fill="currentColor"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2zm8 3.5l-5 4 5 4V7.5zm1 0v8l5-4-5-4z"/></svg>
-                        <span>Установить из RuStore</span>
-                    </a>
-                    <a href="https://api.xn--80aeaajeaw1actmdbcbhk7au1hze.xn--p1ai/downloads/apiary-voice-latest.apk" onclick="if(typeof ym!=='undefined'){ym(107034465, 'reachGoal', 'click_apk');}" class="w-full sm:w-auto px-6 py-4 rounded-xl bg-amber-500 hover:bg-amber-400 text-slate-950 font-extrabold text-base transition-all shadow-xl shadow-amber-500/25 flex items-center justify-center space-x-2">
-                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path></svg>
-                        <span>Скачать APK напрямую</span>
+                    <a href="https://www.rustore.ru/catalog/app/com.apiaryvoice" target="_blank" rel="noopener" onclick="if(typeof ym!=='undefined'){ym(107034465, 'reachGoal', 'click_rustore');}" class="w-full py-3.5 px-4 rounded-xl bg-slate-800 hover:bg-slate-700 text-white font-bold text-sm text-center transition-all">
+                        Скачать бесплатно
                     </a>
                 </div>
-                <p class="text-xs text-slate-400 mt-4">Первые 14 дней бесплатно. Без ввода банковской карты.</p>
+
+                <!-- 2. Умная пасека 50 -->
+                <div class="p-6 rounded-3xl bg-slate-900/90 border border-slate-700/80 flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center justify-between mb-3">
+                            <span class="text-xs font-bold uppercase tracking-wider text-amber-400">До 50 ульев</span>
+                            <span class="px-2.5 py-0.5 rounded-full bg-amber-500/15 text-amber-400 text-[11px] font-bold">ЛПХ</span>
+                        </div>
+                        <h3 class="text-xl font-extrabold text-white mb-2">Умная пасека 50</h3>
+                        <div class="text-3xl font-black text-white mb-1">1 000 ₽ <span class="text-xs font-normal text-slate-400">/ сезон</span></div>
+                        <p class="text-xs text-emerald-400 font-semibold mb-6">Доступ сразу и до 01.02.2028 (зима в подарок)</p>
+                        <ul class="space-y-2.5 text-sm text-slate-300 mb-6">
+                            <li class="flex items-start space-x-2"><span class="text-emerald-400 font-bold">✓</span><span>До <b>50 пчелосемей</b></span></li>
+                            <li class="flex items-start space-x-2"><span class="text-emerald-400 font-bold">✓</span><span><b>Безлимит</b> голосовых осмотров «Свободные руки»</span></li>
+                            <li class="flex items-start space-x-2"><span class="text-emerald-400 font-bold">✓</span><span>Таймлайн расплода и план работ на день</span></li>
+                            <li class="flex items-start space-x-2"><span class="text-amber-400 font-bold">+</span><span>Опция ведомости ВетГИС («Хорриот»): 990 ₽ разово или 2 490 ₽ безлимит</span></li>
+                        </ul>
+                    </div>
+                    <a href="/pay.html?tariff=smart_50" class="w-full py-3.5 px-4 rounded-xl bg-amber-500/15 hover:bg-amber-500 border border-amber-500/50 text-amber-400 hover:text-slate-950 font-extrabold text-sm text-center transition-all">
+                        Подключить за 1 000 ₽
+                    </a>
+                </div>
+
+                <!-- 3. Товарная пасека 150 (Хит для КФХ) -->
+                <div class="p-6 rounded-3xl bg-gradient-to-b from-slate-900 to-slate-950 border-2 border-amber-500 shadow-2xl honey-glow flex flex-col justify-between relative">
+                    <div>
+                        <div class="flex items-center justify-between mb-3">
+                            <span class="text-xs font-bold uppercase tracking-wider text-amber-400">До 150 ульев</span>
+                            <span class="px-3 py-0.5 rounded-full bg-amber-500 text-slate-950 text-[11px] font-black uppercase">Хит КФХ</span>
+                        </div>
+                        <h3 class="text-xl font-extrabold text-white mb-2">Товарная пасека 150</h3>
+                        <div class="text-3xl font-black text-amber-400 mb-1">4 990 ₽ <span class="text-xs font-normal text-slate-400">/ сезон</span></div>
+                        <p class="text-xs text-emerald-400 font-semibold mb-6">Доступ сразу и до 01.02.2028 + ВетГИС включён</p>
+                        <ul class="space-y-2.5 text-sm text-slate-200 mb-6">
+                            <li class="flex items-start space-x-2"><span class="text-emerald-400 font-bold">✓</span><span>До <b>150 пчелосемей</b> и кочевых точков</span></li>
+                            <li class="flex items-start space-x-2"><span class="text-emerald-400 font-bold">✓</span><span><b>Безлимит ведомостей ВетГИС («Хорриот»)</b> в Excel</span></li>
+                            <li class="flex items-start space-x-2"><span class="text-emerald-400 font-bold">✓</span><span><b>Команда до 2 чел.</b> (Бригадир + Помощник)</span></li>
+                            <li class="flex items-start space-x-2"><span class="text-emerald-400 font-bold">✓</span><span>Полный учёт ветпрепаратов, кормов и откачки</span></li>
+                        </ul>
+                    </div>
+                    <a href="/pay.html?tariff=commercial_150" class="w-full py-3.5 px-4 rounded-xl bg-amber-500 hover:bg-amber-400 text-slate-950 font-extrabold text-sm text-center transition-all shadow-lg shadow-amber-500/25">
+                        Подключить за 4 990 ₽
+                    </a>
+                </div>
+
+                <!-- 4. Селекция 400 (Матководство) -->
+                <div class="p-6 rounded-3xl bg-slate-900/90 border border-slate-700/80 flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center justify-between mb-3">
+                            <span class="text-xs font-bold uppercase tracking-wider text-emerald-400">До 400 ульев</span>
+                            <span class="px-2.5 py-0.5 rounded-full bg-emerald-500/15 text-emerald-400 text-[11px] font-bold">Матководам</span>
+                        </div>
+                        <h3 class="text-xl font-extrabold text-white mb-2">Селекция 400</h3>
+                        <div class="text-3xl font-black text-white mb-1">8 990 ₽ <span class="text-xs font-normal text-slate-400">/ 1 чел.</span></div>
+                        <p class="text-xs text-slate-400 mb-6">Или <b class="text-amber-400">16 990 ₽</b> для бригады до 3 человек • до 01.02.2028</p>
+                        <ul class="space-y-2.5 text-sm text-slate-300 mb-6">
+                            <li class="flex items-start space-x-2"><span class="text-emerald-400 font-bold">✓</span><span>До <b>400 семей</b> и нуклеусного парка</span></li>
+                            <li class="flex items-start space-x-2"><span class="text-emerald-400 font-bold">✓</span><span><b>Племенное ядро F0/F1</b>, графики прививок и дочки</span></li>
+                            <li class="flex items-start space-x-2"><span class="text-emerald-400 font-bold">✓</span><span>Индекс 5 селекционных признаков и паспорта маток</span></li>
+                            <li class="flex items-start space-x-2"><span class="text-emerald-400 font-bold">✓</span><span><b>Безлимит ВетГИС («Хорриот»)</b> включён</span></li>
+                        </ul>
+                    </div>
+                    <div class="space-y-2">
+                        <a href="/pay.html?tariff=selection_400" class="block w-full py-3 px-4 rounded-xl bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-extrabold text-sm text-center transition-all">
+                            1 пользователь — 8 990 ₽
+                        </a>
+                        <a href="/pay.html?tariff=selection_team" class="block w-full py-2.5 px-4 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-200 font-bold text-xs text-center transition-all">
+                            Команда до 3 чел. — 16 990 ₽
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- 5. B2B / Кооператив 400+ Banner -->
+            <div class="p-6 sm:p-8 rounded-3xl bg-gradient-to-r from-slate-900 via-slate-900 to-amber-950/30 border border-amber-500/40 flex flex-col lg:flex-row items-start lg:items-center justify-between gap-6">
+                <div class="max-w-2xl">
+                    <div class="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-amber-500/15 text-amber-400 text-xs font-bold mb-3">
+                        <span>🏢 Для ООО, крупных КФХ, агрохолдингов и кооперативов (СПоК)</span>
+                    </div>
+                    <h3 class="text-2xl font-extrabold text-white mb-2">
+                        Тариф «Кооператив 400+» — <span class="text-amber-400">45 000 ₽ / сезон</span>
+                    </h3>
+                    <p class="text-sm text-slate-300 leading-relaxed">
+                        Неограниченное число пчелосемей и пасек, командный доступ до <b>15+ сотрудников</b> (с возможностью индивидуального расширения), полный модуль селекции и безлимитная выгрузка ведомостей ВетГИС («Хорриот»). Официальный договор, оплата по счёту от <b>ООО «Правильное Пчеловодство»</b> (подходит для отчётности по грантам «Агростартап» и субсидиям КФХ).
+                    </p>
+                </div>
+                <div class="flex flex-col sm:flex-row gap-3 w-full lg:w-auto shrink-0">
+                    <a href="/pay.html?mode=invoice&tariff=cooperative_max" class="px-6 py-4 rounded-xl bg-amber-500 hover:bg-amber-400 text-slate-950 font-extrabold text-sm text-center transition-all shadow-lg shadow-amber-500/25">
+                        Выставить счёт на ООО / КФХ
+                    </a>
+                    <a href="/pay.html?tariff=cooperative_max" class="px-5 py-4 rounded-xl bg-slate-800 hover:bg-slate-700 border border-slate-700 text-white font-bold text-sm text-center transition-all">
+                        Оплатить картой / СБП
+                    </a>
+                </div>
             </div>
         </div>
     </section>
@@ -750,7 +821,7 @@
                 <div class="w-9 h-9 rounded-lg bg-amber-500/20 border border-amber-500/30 flex items-center justify-center text-amber-400 font-bold text-base">🐝</div>
                 <div class="flex flex-col">
                     <span class="text-xs font-bold text-white leading-tight">«Голос Пасеки»</span>
-                    <span class="text-[10px] text-amber-400">14 дней бесплатно</span>
+                    <span class="text-[10px] text-amber-400">До 10 ульев — 0 ₽ навсегда</span>
                 </div>
             </div>
             <div class="flex items-center space-x-2">
